@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sina portfolio — a map of disciplines. Explore topics to reveal projects." />
+    <title>Sina Fathollahi</title>
+    <link rel="stylesheet" href="style.css?v=55" />
+  </head>
+  <body>
+    <header class="brand"><a href="#" data-home>Sina Fathollahi</a></header>
+
+    <nav class="viewtoggle" data-viewtoggle aria-label="View">
+      <button type="button" data-view="map" class="is-active">Map</button>
+      <span>/</span>
+      <button type="button" data-view="grid">Grid</button>
+    </nav>
+
+    <nav class="topnav" data-topnav aria-label="Sections">
+      <button type="button" data-nav="projects">Projects</button>
+      <button type="button" data-nav="about">About</button>
+      <button type="button" data-nav="contact">Contact</button>
+    </nav>
+
+    <main class="stage" data-stage>
+      <div class="canvas" data-canvas>
+        <svg class="wires" data-wires aria-hidden="true"></svg>
+        <div class="hub" data-hub></div>
+        <!-- topics, labels and project stacks are injected by main.js -->
+      </div>
+      <p class="hint" data-hint>Click or zoom a topic to explore</p>
+    </main>
+
+    <!-- Grid view -->
+    <section class="grid" data-grid>
+      <div class="grid__inner" data-grid-inner></div>
+    </section>
+
+    <!-- Fullscreen project -->
+    <div class="project" data-project hidden>
+      <div class="project__tools">
+        <button class="project__close" type="button" data-project-close aria-label="Close">
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <path d="M5 5 L19 19 M19 5 L5 19" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" />
+          </svg>
+        </button>
+        <button class="project__full" type="button" data-project-full aria-label="Toggle full screen">
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <path d="M4 9 V4 H9 M15 4 H20 V9 M20 15 V20 H15 M9 20 H4 V15" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+        <button class="project__nav" type="button" data-project-prev aria-label="Previous project">
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <path d="M11 6 L5 12 L11 18 M5 12 H19" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+        <button class="project__nav" type="button" data-project-next aria-label="Next project">
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <path d="M13 6 L19 12 L13 18 M19 12 H5" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+      <div class="project__grid">
+        <div class="project__media" data-project-media></div>
+        <div class="project__meta">
+          <p class="project__field" data-project-field></p>
+          <h1 class="project__title" data-project-title></h1>
+          <div class="project__desc" data-project-desc></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="projects-data.js?v=11"></script>
+    <script src="main.js?v=70"></script>
+  </body>
+</html>

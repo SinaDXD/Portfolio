@@ -1,0 +1,30 @@
+# By-Ber: Interactive Kids’ Chair
+
+**Source:** https://sinafathollahiid.framer.website/works/by-ber  
+**Collaboration:** University of Art  
+**Year:** 2022  
+**Services:** Industrial Design, Interactive Design, Game Design  
+**Duration:** 16 Weeks  
+**Main image:** main_image.webp
+
+## Short Description
+By-Ber is an interactive, modular seat add-on designed to improve the haircut experience for children aged 2–6. It combines playful engagement with ergonomic control, easing stress for young clients and barbers in barbershops.
+
+## Overview
+By-Ber is an interactive add-on product designed to transform the haircut experience for children aged 2 to 6 in Tehran barbershops. Developed as part of my thesis, the project aims to reduce stress and unpredictability during haircuts by creating an engaging, safe, and cooperative environment for both children and barbers.
+
+## Challenge
+Children in this age group often experience fear, boredom, or restlessness during haircuts, making the process challenging for barbers and uncomfortable for parents. The core challenge was twofold: to calm and entertain the child while also giving the barber more control to perform precise work, all within the spatial and cultural constraints of typical barbershops in Tehran.
+
+## Solution
+By-Ber is a modular, portable seat add-on that mounts onto existing barber chairs. Equipped with an interactive screen, facial recognition sensors, and child-safe seating, it gently engages the child through an animated character that narrates stories, plays mini-games, and rewards cooperative behavior with points and treats. For barbers, an adjustable harness system keeps the child comfortably in place, reducing unexpected movements and enabling smoother operation.
+
+## Result
+By-Ber offers a win-win solution: children remain entertained and calm throughout the haircut process, while barbers gain control and focus without added stress. The product has been well received for its cultural relevance, intuitive interaction design, and human-centered approach. It reflects the potential of playful technology and ergonomic design to improve routine services in meaningful, localized ways.
+
+## Images
+- image_02.webp
+- image_03.webp
+- image_05.webp
+- image_06.webp
+- main_image.webp

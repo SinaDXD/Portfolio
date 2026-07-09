@@ -1,0 +1,22 @@
+{
+  "title": "Motion Systems",
+  "slug": "motion_systems",
+  "source_website": "https://sinadesign.ch/works/motion-systems",
+  "source": "sinadesign.ch",
+  "collaboration": "ECAL/RNDR",
+  "year": "2026",
+  "services": [
+    "Creative Coding",
+    "Motion Design",
+    "Data Visualization"
+  ],
+  "duration": "2 Weeks",
+  "short_description": "Motion and media exploration combining Cavalry, creative coding, sound, and video data to create expressive digital visual systems.",
+  "overview": "Creative Coding & Motion Systems brings together two experimental workshops exploring how code can transform sound, movement, and video data into dynamic visual experiences. One workshop was developed with Cavalry and Antonin Waterkeyn; the second with RNDR Studio in collaboration with Amna Ahmad and Seoyun Choi.",
+  "challenge": "The challenge was to explore how music-related content can move beyond static visuals and become more dynamic, expressive, and system-based. Across two workshops, the goal was to translate sound, mood, rhythm, and video data into clear visual systems while keeping the outcomes minimal, engaging, and adaptable across formats.",
+  "solution": "For the Cavalry workshop, I designed three minimalist album identities for digital artists under the same music label. For the RNDR Studio workshop, the team restructured the music video Sledgehammer through data visualization, using machine learning tools and OPENRNDR to decompose scenes, gestures, colors, beats, and audio stems into a generative visual composition.",
+  "result": "The final outcomes showed how music, motion, and video data can be translated into expressive digital visual systems. The Cavalry project resulted in flexible animated album assets, while the RNDR project turned complex audiovisual data into a clearer generative design representation.",
+  "image_note": "Images on the page were served as GIF files that timed out in the web viewer, so no actual image file could be downloaded for this project in this pass.",
+  "images": [],
+  "main_image": null
+}

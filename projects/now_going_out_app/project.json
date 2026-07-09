@@ -1,0 +1,28 @@
+{
+  "title": "Now Going Out App",
+  "slug": "now_going_out_app",
+  "source_website": "https://sinadesign.ch/works/now-going-out-app",
+  "source": "sinadesign.ch",
+  "collaboration": "Vala Design Studio",
+  "year": "2020",
+  "services": [
+    "UI/UX Design",
+    "Web Development",
+    "Digital Design"
+  ],
+  "duration": "8",
+  "short_description": "NOW is an interactive leisure-planning app.",
+  "overview": "NOW is an interactive leisure-planning app that helps users discover events and places based on interests, budget, lifestyle, and available time. Users can plan alone or with friends. In group mode, the app suggests options that match everyone’s preferences, supports voting, and helps complete the plan through ticket purchase, booking, ride request, or navigation.",
+  "challenge": "A core challenge was mobile-first usability, since most users were expected to access the service on their phones. The target audience included international tourists, so the project also needed accessible navigation across language barriers and compact information structure.",
+  "solution": "The concept used mobile-first design and clear navigation structures. A hamburger menu gave shortcuts to page sections, and an AI-powered translation feature supported users switching between languages.",
+  "result": "The final concept offers a smoother way to plan spontaneous outings with friends or people with similar tastes, moving quickly from “What should we do?” to a shared plan.",
+  "images": [
+    "image_02.webp",
+    "image_03.webp",
+    "image_04.png",
+    "image_05.png",
+    "image_06.webp",
+    "main_image.webp"
+  ],
+  "main_image": "image_02.webp"
+}

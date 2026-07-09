@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# Source content library — huge (masters, source files, raw videos).
+# Kept locally as the source of truth; the live site reads copied web images
+# in projects/ and streams videos from Vimeo, so this is not deployed.
+Content-Library/
+content-library/
+
+# Local video captures — not used by the site (videos live on Vimeo)
+videos/
+
+# Tooling / temp
+node_modules/
+*.log
+.netlify/

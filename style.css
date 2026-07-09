@@ -1,0 +1,474 @@
+@font-face {
+  font-family: "Nimbus Sans L";
+  src: url("fonts/NimbusSanL-Regu.ttf") format("truetype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Nimbus Sans L";
+  src: url("fonts/NimbusSanL-Bold.ttf") format("truetype");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Nimbus Sans L";
+  src: url("fonts/NimbusSanL-ReguItal.ttf") format("truetype");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+
+:root {
+  --bg: #f7f6f3;          /* near-white paper */
+  --ink: #15140f;         /* black */
+  --line: rgba(21, 20, 15, 0.55);   /* thin spoke lines */
+  --muted: rgba(21, 20, 15, 0.5);
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 18px; }      /* root size — bumps every rem-based text up */
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Nimbus Sans L", Helvetica, Arial, sans-serif;
+  font-size: 18px;       /* bumped up — everything scales from here */
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+::selection { background: var(--ink); color: var(--bg); }
+
+/* ── Brand ── */
+.brand {
+  position: fixed;
+  top: 1.6rem;
+  left: 1.8rem;
+  z-index: 50;          /* above the grid view so the name stays visible there too */
+}
+.brand a {
+  font-size: 1.05rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+/* ── View toggle (Map / Grid) ── */
+.viewtoggle {
+  position: fixed;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+.viewtoggle span { color: var(--muted); }
+.viewtoggle button {
+  border: 0;
+  background: none;
+  font: inherit;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.25s ease;
+}
+.viewtoggle button:hover { color: var(--ink); }
+.viewtoggle button.is-active { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ── Top-right nav (Projects / About / Contact) — plain text, no extra style ── */
+.topnav {
+  position: fixed;
+  top: 1.6rem;
+  right: 1.8rem;
+  z-index: 50;
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.05rem;
+}
+.topnav button {
+  border: 0; background: none; font: inherit; color: var(--ink);
+  cursor: pointer; padding: 0;
+  transition: color 0.2s ease;
+}
+.topnav button:hover { color: var(--muted); }
+.topnav button[data-nav="projects"], .topnav button[data-nav="contact"] { display: none; }  /* keep only About */
+
+/* ── Grid view ── full-screen, responsive, rows stretch to fill the viewport */
+.grid {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  overflow-y: auto;
+  background: var(--bg);
+  padding-top: 4.6rem;          /* match the space above the top-bar text below it too */
+}
+body.view-grid .grid { display: flex; flex-direction: column; }
+body.view-grid .stage,
+body.view-grid .hint { display: none; }
+
+.grid__inner {
+  flex: 1 0 auto;               /* fill the remaining height under the toggle */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(max(220px, 24%), 1fr));  /* ≤ 4 columns */
+  grid-auto-rows: minmax(200px, 1fr);   /* few rows → stretch to fill; many → scroll */
+  gap: 0;
+  background: var(--bg);
+  border-top: 1px solid var(--ink);
+  border-left: 1px solid var(--ink);
+}
+.cell {
+  position: relative;
+  display: block;
+  padding: 0;
+  margin: 0;
+  /* the only "space" — thin black lines between cells */
+  border: 0;
+  border-right: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  background: var(--bg);
+  min-height: 200px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.cell img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cell__name {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #fff;               /* slim white box */
+  color: var(--ink);
+  font-size: 0.72rem;
+  letter-spacing: 0.01em;
+  padding: 0.28rem 0.6rem;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Stage / canvas ── */
+.stage {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  background: var(--bg);
+}
+.stage.is-dragging { cursor: grabbing; }
+
+.canvas {
+  position: absolute;
+  top: 0; left: 0;
+  width: 2900px;                 /* must match CANVAS_W/H in main.js for correct centering */
+  height: 2100px;
+  transform-origin: 0 0;
+  will-change: transform;
+}
+
+/* ── Wires (spokes) ── */
+.wires { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+.wires line {
+  stroke: var(--line);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;   /* keep 1px crisp at any zoom */
+}
+.wires line.connect { stroke: var(--ink); stroke-dasharray: 4 4; }
+/* sub-spokes branch off each topic tip — fade in with zoom via inherited --sep */
+/* sub-spokes GROW outward in step with the zoom (--sep): the line draws from the
+   node and reaches the photo just as it finishes sliding out. */
+.wires line.subwire {
+  stroke: var(--line);
+  stroke-dasharray: 1;                          /* pathLength="1" → dash math runs 0..1 */
+  stroke-dashoffset: calc(1 - var(--sep, 0));   /* sep 0 → undrawn, sep 1 → fully drawn */
+}
+
+/* ── Hub ── */
+.hub {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  background: var(--bg);
+  transform: translate(-50%, -50%);
+  z-index: 6;
+  cursor: pointer;
+}
+.hub__label {
+  position: absolute;
+  top: calc(100% + 0.55rem);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.78rem;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+/* ── Topic endpoint dots ── */
+.node {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  background: var(--bg);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 7;
+  transition: background 0.3s ease;
+}
+.node.is-pinned { background: var(--ink); }
+.node.dim { opacity: 0.28; }
+
+/* ── Spoke labels — always horizontal (up is up), set OFF the line, above it.
+   The exact anchor transform is set per-label by JS. ── */
+.label {
+  position: absolute;
+  z-index: 14;                   /* always above the photo stacks */
+  padding: 1px 5px;
+  border: 0;
+  background: none;              /* no fill behind the label text */
+  font-family: inherit;
+  font-size: 1.2rem;             /* bigger discipline labels */
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.label.in { opacity: 1; }
+/* text appears only once the photos have reached full separation (last stretch of --sep) */
+.label--sub { font-size: 0.95rem; color: var(--muted); opacity: calc((var(--sep, 0) - 0.82) / 0.18); pointer-events: none; cursor: default; transition: none; }
+/* the tip dot fades in as its line finishes drawing */
+.node--sub { width: 12px; height: 12px; opacity: calc((var(--sep, 0) - 0.85) / 0.15); pointer-events: none; transition: background 0.3s ease; }
+.label__tri {                      /* the ▷ marker, shown when open */
+  width: 0; height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 6px solid var(--ink);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.label.is-open .label__tri { opacity: 1; }
+
+/* ── Project photos ──
+   One photo per project. Each rests piled at its discipline node when zoomed
+   out (--sep 0) and slides out to the tip of its own sub-spoke (--ddx,--ddy,
+   set per photo in JS) as you zoom in (--sep → 1). Hovering one dims the rest. */
+.canvas { --sep: 0; }
+.branchset { display: contents; }   /* no box of its own; children sit on the canvas */
+
+.photo {
+  position: absolute;
+  width: 124px;
+  aspect-ratio: 1 / 1;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  background: rgba(0,0,0,0.05);
+  box-shadow: 0 10px 24px rgba(21,20,15,0.14);
+  cursor: pointer;
+  z-index: calc(12 - var(--i));   /* keep below labels (z14); first photo on top */
+  transform: translate(-50%, -50%)
+    translate(
+      calc(var(--ddx, 0) * 1px * var(--sep)),
+      calc(var(--ddy, 0) * 1px * var(--sep))
+    );
+  transition: opacity 0.3s ease, box-shadow 0.3s ease;
+}
+.photo img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+/* hover one project → dim the others to focus it */
+.branchset:hover .photo { opacity: 0.25; }
+.branchset:hover .photo:hover {
+  opacity: 1;
+  z-index: 30;
+  box-shadow: 0 18px 40px rgba(21,20,15,0.28);
+}
+/* project open (desktop): spotlight the selected project, dim the rest;
+   hovering any still brings it fully back, as usual */
+.canvas.is-projectview .photo { opacity: 0.22; }
+.canvas.is-projectview .photo.is-selected { opacity: 1; }
+.canvas.is-projectview .photo:hover { opacity: 1; }
+
+/* ── Minimal hint ── */
+.hint {
+  position: fixed;
+  left: 50%;
+  bottom: 1.7rem;
+  transform: translateX(-50%);
+  z-index: 20;
+  margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+}
+.hint.is-hidden { opacity: 0; }
+
+/* ── Fullscreen project ── */
+.project {
+  position: fixed; inset: 0; z-index: 60;
+  --pad-x: clamp(2rem, 4vw, 4rem);    /* panel side padding — also where the photo column begins */
+  background: transparent;             /* left gutter stays see-through onto the map */
+  pointer-events: none;               /* clicks in the gutter fall through to the map */
+  opacity: 0;
+  transform: scale(1.04);
+  transform-origin: center;
+  transition: opacity 0.45s ease, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.project[hidden] { display: none; }
+.project.in { opacity: 1; transform: scale(1); }      /* simple entry (grid view) */
+
+/* ── Shared-element morph (clicking a photo on the map) ── */
+.hero-clone {
+  position: fixed;
+  z-index: 70;
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+  box-shadow: 0 16px 40px rgba(21, 20, 15, 0.14);
+}
+.hero-clone.morph {
+  transition: left 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              top 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              width 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              height 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+/* Phase 1 — page visible but transparent; only the morphing clone shows over the map */
+.project.is-entering {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+.project.is-entering .project__grid { background: transparent; border-left-color: transparent; }
+.project.is-entering [data-project-media] img,
+.project.is-entering .project__meta,
+.project.is-entering .project__close { opacity: 0; }
+/* Phase 2 — fill the panel, hand off to the real hero, then build the content */
+.project.is-open {
+  opacity: 1;
+  transform: none;
+}
+.project.is-open .project__grid {
+  background: var(--bg);
+  border-left-color: var(--ink);
+  transition: background 0.45s ease, border-left-color 0.45s ease,
+              width 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.project.is-open [data-project-media] img:first-child { opacity: 1; }   /* matches the clone */
+.project.is-open .project__close { opacity: 1; transition: opacity 0.4s ease 0.2s; }
+.project.is-open .project__meta,
+.project.is-open [data-project-media] img:not(:first-child) {
+  opacity: 1;
+  transition: opacity 0.5s ease 0.18s;
+}
+.project__tools {
+  /* left edge lines up with the photo column (panel left + side padding); the
+     -0.3rem cancels the buttons' own padding so the icon sits on that line */
+  position: fixed; top: 1.5rem; left: calc(25vw + var(--pad-x) - 0.3rem); z-index: 2;
+  display: flex; gap: 0.5rem;
+  pointer-events: auto;               /* stays clickable even though the gutter doesn't */
+  transition: left 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.project.is-full .project__tools { left: calc(var(--pad-x) - 0.3rem); }   /* panel fills the screen */
+.project__tools button {
+  border: 0; background: none; padding: 0.3rem; line-height: 0;
+  cursor: pointer; color: var(--ink);
+  opacity: 0.65; transition: opacity 0.2s ease;
+}
+.project__tools button:hover { opacity: 1; }
+.project__tools svg { display: block; }
+/* map-opened project shows the full-screen toggle; grid-opened shows prev/next */
+.project__nav { display: none; }
+.project.from-grid .project__full { display: none; }
+.project.from-grid .project__nav { display: block; }
+/* full-screen project — panel covers the whole viewport, no map gutter / divider */
+.project.is-full .project__grid { width: 100%; border-left: 0; }
+.project__grid {
+  height: 100%;
+  width: 75vw;                        /* the panel takes 3/4 of the screen, map gets the rest */
+  margin-left: auto;                  /* leaves a transparent map gutter on the left */
+  background: var(--bg);
+  border-left: 1px solid var(--ink);  /* thin divider between map (left) and project (right) */
+  pointer-events: auto;               /* the panel itself captures clicks */
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: clamp(1.5rem, 5vw, 5rem);
+  padding: clamp(4rem, 8vw, 7rem) var(--pad-x);
+  overflow-y: auto;
+}
+.project__media { display: flex; flex-direction: column; gap: 0.9rem; }
+.project__media img { width: 100%; display: block; box-shadow: 0 16px 40px rgba(21,20,15,0.14); }
+/* Vimeo video box — sits where images sit, same shadow; sized by aspect */
+.project__video {
+  position: relative; width: 100%; background: #000; overflow: hidden;
+  box-shadow: 0 16px 40px rgba(21, 20, 15, 0.14);
+}
+.project__video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
+.project__video--landscape, .project__video--horizontal { aspect-ratio: 16 / 9; }
+.project__video--square { aspect-ratio: 1 / 1; }
+.project__video--portrait, .project__video--vertical {
+  aspect-ratio: 9 / 16; width: 100%; max-width: 360px; align-self: center;
+}
+.project__meta { align-self: start; position: sticky; top: 0; height: max-content; }
+.project__field { margin: 0 0 0.7rem; font-size: 0.78rem; letter-spacing: 0.04em; color: var(--muted); }
+.project__title { margin: 0 0 1.3rem; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 500; line-height: 1.05; letter-spacing: -0.01em; }
+.project__desc { margin: 0; font-size: 1rem; line-height: 1.6; max-width: 46ch; color: rgba(21,20,15,0.8); }
+.project__desc p { margin: 0 0 1rem; }
+.project__metaline { font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+.project__lead { font-size: 1.08rem; color: var(--ink); }
+.project__desc h3 {
+  margin: 1.6rem 0 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+@media (max-width: 760px) {
+  html { font-size: 15px; }                  /* scale all rem-based text down for the phone */
+  /* top bar: Sina Fathollahi (left) · Map / List (centre) · About (right),
+     vertically centred in the header band above the grid line */
+  /* all three share the same top, height and flex-centring so their text aligns */
+  .brand, .viewtoggle, .topnav { top: 1.75rem; height: 1.2rem; display: flex; align-items: center; }
+  .brand { left: 1rem; }
+  .brand a { font-size: 0.9rem; line-height: 1; }
+  .viewtoggle { left: 50%; right: auto; transform: translateX(-50%); font-size: 0.9rem; gap: 0.4rem; }
+  .viewtoggle button[data-view="grid"] { font-size: 0; }            /* swap "Grid" → "List" on phones */
+  .viewtoggle button[data-view="grid"]::after { content: "List"; font-size: 0.9rem; }
+  .topnav { right: 1rem; left: auto; gap: 1rem; font-size: 0.9rem; }
+  .topnav button[data-nav="projects"], .topnav button[data-nav="contact"] { display: none; }  /* show only About */
+  .label { font-size: 1.05rem; }             /* discipline labels */
+  .label--sub { font-size: 0.85rem; }        /* project labels */
+  .photo { width: 116px; }
+  /* phone Grid view → a single-column list */
+  .grid__inner { grid-template-columns: 1fr; grid-auto-rows: auto; border-left: 0; }
+  .cell { min-height: 0; aspect-ratio: 3 / 2; border-right: 0; }
+  /* phone: full-screen page, no map gutter / divider */
+  .project__grid {
+    grid-template-columns: 1fr;
+    width: 100%; margin-left: 0; border-left: 0;
+  }
+  .project { pointer-events: auto; --pad-x: 1.4rem; }
+  .project__tools { top: 1rem; left: calc(var(--pad-x) - 0.3rem); }
+  .project__full { display: none; }   /* phone page is already full screen */
+  .project__nav { display: block; }   /* prev/next always available on phones (map- or list-opened) */
+  /* phone: show the text first, then the images */
+  .project__meta { order: -1; position: static; align-self: stretch; }
+  .project__media { order: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition-duration: 0.01ms !important; }
+}

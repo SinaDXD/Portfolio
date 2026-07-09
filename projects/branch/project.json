@@ -1,0 +1,28 @@
+{
+  "title": "Branch - Restaurant Web Design",
+  "slug": "branch_restaurant_web_design",
+  "source_website": "https://sinafathollahiid.framer.website/works/branch",
+  "source": "sinafathollahiid.framer.website",
+  "collaboration": "Branch",
+  "year": "2025",
+  "services": [
+    "UI/UX Design",
+    "Web Development",
+    "Digital Design"
+  ],
+  "duration": "8",
+  "short_description": "Branch is a single-page, mobile-first website designed for a local restaurant targeting both tourists and locals.",
+  "overview": "Branch is a responsive, single-page mobile website designed for a local restaurant with a diverse customer base. The project focused on usability, accessibility, and clear content hierarchy—ensuring both international tourists and local diners could navigate the site with ease and confidence.",
+  "challenge": "Key challenges included designing a content-rich single-page layout without overwhelming users, enabling seamless multilingual support for international guests, and optimizing the experience for mobile-first usage. The site needed to convey all essential information—menu, hours, reservations, location—quickly and clearly while maintaining a strong visual identity.",
+  "solution": "The design process began with persona development and journey mapping to understand the needs of both tourist and local user groups. From these insights, a clear information architecture was developed to support fast access to key content. An AI-powered translation feature addressed language barriers, while a hamburger menu simplified navigation across the page. Wireframes were iteratively tested and refined to ensure a smooth, intuitive flow for mobile users while remaining scalable for desktop viewing.",
+  "result": "The final product is a sleek, single-page mobile website that balances clarity and functionality. Its adaptive structure, thoughtful interaction design, and AI-driven accessibility features offer a welcoming and efficient experience for a global audience. The project reflects a strategic blend of UX research, responsive interface design, and inclusive user experience.",
+  "images": [
+    "main_image.webp",
+    "image_02.webp",
+    "image_03.webp",
+    "image_04.webp",
+    "image_05.webp",
+    "image_06.webp"
+  ],
+  "main_image": "main_image.webp"
+}

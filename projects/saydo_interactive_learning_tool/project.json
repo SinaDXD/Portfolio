@@ -1,0 +1,28 @@
+{
+  "id": "saydo_interactive_learning_tool",
+  "title": "Saydo: Interactive Learning Tool",
+  "slug": "saydo",
+  "source_url": "https://sinafathollahiid.framer.website/works/saydo",
+  "collaboration": "FHNW / GFBASEL / ZGSZ",
+  "year": "2025",
+  "services": [
+    "Interaction Design",
+    "Design for Children",
+    "Game Design"
+  ],
+  "duration": "20 Weeks",
+  "short_description": "Interactive game-based tool fostering sign language learning between DHH children and hearing parents.",
+  "overview": "SAYDO is an interactive, game-based tool designed to support early communication between Deaf/Hard-of-Hearing (DHH) children and their hearing parents through shared sign language learning. It uses RFID-enabled wooden tokens, animated sign demonstrations, and multisensory feedback to create a collaborative and playful learning experience. Developed through inclusive design and co-creation with experts, SAYDO bridges emotional and educational gaps in DHH families.",
+  "challenge": "Communication Gap: Over 90% of DHH children are born to hearing parents who often lack sign language skills, leading to delays in language and emotional bonding. Learning Barriers: Sign language is not intuitive for most learners and requires consistent practice, which is difficult for busy parents. Lack of Tools: Existing tools often target either children or adults separately and fail to provide an inclusive, shared learning experience for both.",
+  "solution": "SAYDO offers an inclusive, interactive learning experience where DHH children and hearing parents learn sign language together through play. The system combines tangible wooden tokens, animated gestures, and multisensory feedback to create an engaging, intuitive UX. Its two-player mode fosters cooperation and bonding, while solo mode supports self-paced practice, making language learning accessible, joyful, and emotionally meaningful.",
+  "result": "SAYDO is a functional prototype of an interactive sign language learning tool that fosters communication between DHH children and their hearing parents. It enables shared learning through playful interaction, tangible elements, and visual-haptic feedback. The outcome bridges emotional and linguistic gaps, supporting early childhood development and inclusive family bonding.",
+  "main_image": "main_image.webp",
+  "images": [
+    "image_02.webp",
+    "image_03.webp",
+    "image_04.webp",
+    "image_05.webp",
+    "image_06.webp",
+    "main_image.webp"
+  ]
+}
