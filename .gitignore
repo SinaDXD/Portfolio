@@ -14,3 +14,6 @@ videos/
 node_modules/
 *.log
 .netlify/
+
+# Claude Code local settings
+.claude/

@@ -404,10 +404,17 @@ body.view-grid .hint { display: none; }
   pointer-events: auto;               /* the panel itself captures clicks */
   display: grid;
   grid-template-columns: 1.4fr 1fr;
+  grid-template-rows: minmax(0, 1fr); /* each column bounded to the panel height, scrolls on its own */
   gap: clamp(1.5rem, 5vw, 5rem);
   padding: clamp(4rem, 8vw, 7rem) var(--pad-x);
-  overflow-y: auto;
+  overflow: hidden;
 }
+/* each column scrolls independently; JS hands scroll to the other side at the end */
+.project__media, .project__meta {
+  min-height: 0; overflow-y: auto; overscroll-behavior: contain;
+  scrollbar-width: none;              /* hide the scrollbars, keep the scroll */
+}
+.project__media::-webkit-scrollbar, .project__meta::-webkit-scrollbar { width: 0; height: 0; }
 .project__media { display: flex; flex-direction: column; gap: 0.9rem; }
 .project__media img { width: 100%; display: block; box-shadow: 0 16px 40px rgba(21,20,15,0.14); }
 /* Vimeo video box — sits where images sit, same shadow; sized by aspect */
@@ -421,7 +428,7 @@ body.view-grid .hint { display: none; }
 .project__video--portrait, .project__video--vertical {
   aspect-ratio: 9 / 16; width: 100%; max-width: 360px; align-self: center;
 }
-.project__meta { align-self: start; position: sticky; top: 0; height: max-content; }
+.project__meta { align-self: stretch; }
 .project__field { margin: 0 0 0.7rem; font-size: 0.78rem; letter-spacing: 0.04em; color: var(--muted); }
 .project__title { margin: 0 0 1.3rem; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 500; line-height: 1.05; letter-spacing: -0.01em; }
 .project__desc { margin: 0; font-size: 1rem; line-height: 1.6; max-width: 46ch; color: rgba(21,20,15,0.8); }
@@ -436,6 +443,54 @@ body.view-grid .hint { display: none; }
   text-transform: uppercase;
   color: var(--ink);
 }
+
+/* ── About page (same visual language as the project view) ── */
+.about {
+  position: fixed; inset: 0; z-index: 60;
+  background: var(--bg);
+  overflow-y: auto;
+  opacity: 0; transform: scale(1.02);
+  transition: opacity 0.4s ease, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.about[hidden] { display: none; }
+.about.in { opacity: 1; transform: none; }
+.about__close {
+  position: fixed; top: 1.5rem; left: calc(50% - min(46vw, 620px) + 0.3rem); z-index: 2;
+  border: 0; background: none; padding: 0.3rem; line-height: 0; cursor: pointer;
+  color: var(--ink); opacity: 0.65; transition: opacity 0.2s ease;
+}
+.about__close:hover { opacity: 1; }
+.about__close svg { display: block; }
+.about__grid {
+  max-width: min(92vw, 1240px);
+  margin: 0 auto;
+  padding: clamp(4.5rem, 9vw, 7.5rem) 0 clamp(3rem, 6vw, 5rem);
+  display: grid;
+  grid-template-columns: minmax(260px, 38%) 1fr;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: start;
+}
+.about__photo { margin: 0; position: sticky; top: clamp(4.5rem, 9vw, 7.5rem); }
+.about__photo img {
+  width: 100%; display: block; aspect-ratio: 1109 / 1600; object-fit: cover;
+  box-shadow: 0 16px 40px rgba(21, 20, 15, 0.14);
+}
+.about__label { margin: 0 0 0.7rem; font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+.about__title { margin: 0 0 1.3rem; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 500; line-height: 1.05; letter-spacing: -0.01em; }
+.about__lead { margin: 0 0 2.4rem; font-size: 1.08rem; line-height: 1.6; max-width: 46ch; color: var(--ink); }
+.about__heading {
+  margin: 2rem 0 0.8rem; font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink);
+}
+.about__list { list-style: none; margin: 0; padding: 0; max-width: 52ch; }
+.about__list li { margin-bottom: 1rem; }
+.about__row-title { display: block; font-size: 1rem; color: var(--ink); }
+.about__row-sub { display: block; font-size: 0.88rem; color: var(--muted); letter-spacing: 0.01em; }
+.about__row-desc { display: block; margin-top: 0.4rem; font-size: 0.92rem; line-height: 1.5; max-width: 48ch; color: rgba(21, 20, 15, 0.7); }
+.about__contact li { display: grid; grid-template-columns: 6.5rem 1fr; align-items: baseline; gap: 0.6rem; margin-bottom: 0.6rem; }
+.about__contact .about__row-sub { text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.06em; }
+.about__contact a { color: var(--ink); text-decoration: none; }
+.about__contact a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 @media (max-width: 760px) {
   html { font-size: 15px; }                  /* scale all rem-based text down for the phone */
@@ -456,11 +511,14 @@ body.view-grid .hint { display: none; }
   /* phone Grid view → a single-column list */
   .grid__inner { grid-template-columns: 1fr; grid-auto-rows: auto; border-left: 0; }
   .cell { min-height: 0; aspect-ratio: 3 / 2; border-right: 0; }
-  /* phone: full-screen page, no map gutter / divider */
+  /* phone: full-screen page, no map gutter / divider; single scroll (stacked) */
   .project__grid {
     grid-template-columns: 1fr;
+    grid-template-rows: none;
     width: 100%; margin-left: 0; border-left: 0;
+    overflow-y: auto;
   }
+  .project__media, .project__meta { overflow: visible; min-height: auto; }
   .project { pointer-events: auto; --pad-x: 1.4rem; }
   .project__tools { top: 1rem; left: calc(var(--pad-x) - 0.3rem); }
   .project__full { display: none; }   /* phone page is already full screen */
@@ -468,6 +526,15 @@ body.view-grid .hint { display: none; }
   /* phone: show the text first, then the images */
   .project__meta { order: -1; position: static; align-self: stretch; }
   .project__media { order: 0; }
+  /* About: stack photo over text, full width */
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+    max-width: 100%;
+    padding: 4rem 1.4rem 3rem;
+  }
+  .about__photo { position: static; max-width: 300px; }
+  .about__close { top: 1rem; left: 1rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { transition-duration: 0.01ms !important; }

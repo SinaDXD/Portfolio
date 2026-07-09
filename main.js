@@ -262,6 +262,8 @@ function fillProject(pid) {
       (s.label ? `<h3>${esc(s.label)}</h3>` : "") + `<p>${esc(s.body)}</p>`).join("");
   pv.querySelector("[data-project-media]").innerHTML = mediaHTML(p);
   pv.scrollTop = 0; pv.querySelector(".project__grid").scrollTop = 0;
+  pv.querySelector("[data-project-media]").scrollTop = 0;
+  pv.querySelector(".project__meta").scrollTop = 0;
   return true;
 }
 
@@ -335,6 +337,27 @@ function closeProject() {
   clampTargets(); kick();                 // ease the map back into normal bounds
   setTimeout(() => { pv.hidden = true; }, 500);
 }
+// Two-column reading: text and images scroll independently under the cursor;
+// when the hovered side reaches its end, the wheel continues the OTHER side.
+(() => {
+  const grid = pv.querySelector(".project__grid");
+  const media = pv.querySelector("[data-project-media]");
+  const meta = pv.querySelector(".project__meta");
+  const canScroll = (el, dy) => dy > 0
+    ? Math.ceil(el.scrollTop + el.clientHeight) < el.scrollHeight
+    : el.scrollTop > 0;
+  grid.addEventListener("wheel", (e) => {
+    if (!isDesktop()) return;                      // phone scrolls as one stacked column
+    const over = e.target.closest("[data-project-media]") ? media
+               : (e.target.closest(".project__meta") ? meta : null);
+    if (!over) return;
+    const other = over === media ? meta : media;
+    if (!canScroll(over, e.deltaY) && canScroll(other, e.deltaY)) {
+      other.scrollTop += e.deltaY;                 // hand the scroll to the other side
+      e.preventDefault();
+    }
+  }, { passive: false });
+})();
 document.querySelector("[data-project-close]").addEventListener("click", closeProject);
 document.querySelector("[data-project-full]").addEventListener("click", () => pv.classList.toggle("is-full"));
 document.querySelector("[data-project-prev]").addEventListener("click", () => navProject(-1));
@@ -373,9 +396,24 @@ viewBtns.forEach((b) => b.addEventListener("click", () => setView(b.dataset.view
 document.querySelectorAll("[data-topnav] button").forEach((b) => {
   b.addEventListener("click", () => {
     if (b.dataset.nav === "projects") { setView("map"); interacted(); centerOn(HUB.x, HUB.y, DEFAULT_SCALE); }
-    // about / contact — placeholders for now (no pages yet)
+    else if (b.dataset.nav === "about") openAbout();
+    // contact — placeholder
   });
 });
+
+// ── About overlay ──────────────────────────────────────────────────
+const aboutEl = document.querySelector("[data-about]");
+function openAbout() {
+  aboutEl.hidden = false;
+  aboutEl.scrollTop = 0;
+  requestAnimationFrame(() => aboutEl.classList.add("in"));
+}
+function closeAbout() {
+  aboutEl.classList.remove("in");
+  setTimeout(() => { aboutEl.hidden = true; }, 450);
+}
+document.querySelector("[data-about-close]").addEventListener("click", closeAbout);
+document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !aboutEl.hidden) closeAbout(); });
 
 // ═══════════════════════════════════════════════════════════════════
 //  PAN + ZOOM  (drag to pan, wheel to zoom toward cursor; zoom drives the
