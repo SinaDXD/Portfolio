@@ -386,6 +386,8 @@ body.view-grid .hint { display: none; }
   border: 0; background: none; padding: 0.3rem; line-height: 0;
   cursor: pointer; color: var(--ink);
   opacity: 0.65; transition: opacity 0.2s ease;
+  /* paper-coloured halo — invisible on the bg, keeps icons visible over dark images */
+  filter: drop-shadow(0 0 3px var(--bg)) drop-shadow(0 0 2px var(--bg));
 }
 .project__tools button:hover { opacity: 1; }
 .project__tools svg { display: block; }
@@ -406,12 +408,15 @@ body.view-grid .hint { display: none; }
   grid-template-columns: 1.4fr 1fr;
   grid-template-rows: minmax(0, 1fr); /* each column bounded to the panel height, scrolls on its own */
   gap: clamp(1.5rem, 5vw, 5rem);
-  padding: clamp(4rem, 8vw, 7rem) var(--pad-x);
+  padding: 0 var(--pad-x);            /* no vertical padding — columns run full height */
   overflow: hidden;
 }
-/* each column scrolls independently; JS hands scroll to the other side at the end */
+/* each column scrolls independently, edge to edge; the vertical padding lives
+   INSIDE the scroll so content starts below the toolbar but can scroll all the
+   way to the top/bottom of the browser before it disappears */
 .project__media, .project__meta {
   min-height: 0; overflow-y: auto; overscroll-behavior: contain;
+  padding-block: clamp(4rem, 8vw, 7rem);
   scrollbar-width: none;              /* hide the scrollbars, keep the scroll */
 }
 .project__media::-webkit-scrollbar, .project__meta::-webkit-scrollbar { width: 0; height: 0; }
@@ -516,8 +521,9 @@ body.view-grid .hint { display: none; }
     grid-template-rows: none;
     width: 100%; margin-left: 0; border-left: 0;
     overflow-y: auto;
+    padding: clamp(4rem, 8vw, 7rem) var(--pad-x);
   }
-  .project__media, .project__meta { overflow: visible; min-height: auto; }
+  .project__media, .project__meta { overflow: visible; min-height: auto; padding-block: 0; }
   .project { pointer-events: auto; --pad-x: 1.4rem; }
   .project__tools { top: 1rem; left: calc(var(--pad-x) - 0.3rem); }
   .project__full { display: none; }   /* phone page is already full screen */
