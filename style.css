@@ -486,7 +486,6 @@ body.view-grid .hint { display: none; }
 .about__list li { margin-bottom: 1rem; }
 .about__row-title { display: block; font-size: 1rem; color: var(--ink); }
 .about__row-sub { display: block; font-size: 0.88rem; color: var(--muted); letter-spacing: 0.01em; }
-.about__row-desc { display: block; margin-top: 0.4rem; font-size: 0.92rem; line-height: 1.5; max-width: 48ch; color: rgba(21, 20, 15, 0.7); }
 .about__contact li { display: grid; grid-template-columns: 6.5rem 1fr; align-items: baseline; gap: 0.6rem; margin-bottom: 0.6rem; }
 .about__contact .about__row-sub { text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.06em; }
 .about__contact a { color: var(--ink); text-decoration: none; }
