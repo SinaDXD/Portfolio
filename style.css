@@ -420,7 +420,8 @@ body.view-grid .hint { display: none; }
   scrollbar-width: none;              /* hide the scrollbars, keep the scroll */
 }
 .project__media::-webkit-scrollbar, .project__meta::-webkit-scrollbar { width: 0; height: 0; }
-.project__media { display: flex; flex-direction: column; gap: 0.9rem; }
+.project__media { display: block; }   /* block, not flex — flex breaks aspect-ratio on the video boxes */
+.project__media > * + * { margin-top: 0.9rem; }
 .project__media img { width: 100%; display: block; box-shadow: 0 16px 40px rgba(21,20,15,0.14); }
 /* Vimeo video box — sits where images sit, same shadow; sized by aspect */
 .project__video {
@@ -431,7 +432,7 @@ body.view-grid .hint { display: none; }
 .project__video--landscape, .project__video--horizontal { aspect-ratio: 16 / 9; }
 .project__video--square { aspect-ratio: 1 / 1; }
 .project__video--portrait, .project__video--vertical {
-  aspect-ratio: 9 / 16; width: 100%; max-width: 360px; align-self: center;
+  aspect-ratio: 9 / 16; width: 100%; max-width: 360px; margin-inline: auto;
 }
 .project__meta { align-self: stretch; }
 .project__field { margin: 0 0 0.7rem; font-size: 0.78rem; letter-spacing: 0.04em; color: var(--muted); }
