@@ -1,5 +1,6 @@
 // Auto-generated from Content-Library (index.json + per-project content.json/videos.json).
 // Images copied to projects/<library-folder>/. Videos are Vimeo ids embedded as iframes.
+// Video w/h are real Vimeo dimensions (for exact aspect boxes).
 const PROJECTS = {
   "saydo": {
     "title": "SAYDO",
@@ -60,7 +61,9 @@ const PROJECTS = {
         "loop": true,
         "sound": false,
         "aspect": "landscape",
-        "id": "1104125707"
+        "id": "1104125707",
+        "w": 426,
+        "h": 240
       }
     ]
   },
@@ -116,7 +119,9 @@ const PROJECTS = {
         "loop": false,
         "sound": true,
         "aspect": "landscape",
-        "id": "1106700354"
+        "id": "1106700354",
+        "w": 426,
+        "h": 240
       }
     ]
   },
@@ -192,7 +197,9 @@ const PROJECTS = {
         "loop": true,
         "sound": false,
         "aspect": "landscape",
-        "id": "1105171772"
+        "id": "1105171772",
+        "w": 360,
+        "h": 240
       }
     ]
   },
@@ -243,7 +250,9 @@ const PROJECTS = {
         "loop": true,
         "sound": false,
         "aspect": "portrait",
-        "id": "1104931397"
+        "id": "1104931397",
+        "w": 342,
+        "h": 240
       }
     ]
   },
@@ -407,7 +416,9 @@ const PROJECTS = {
         "loop": true,
         "sound": false,
         "aspect": "landscape",
-        "id": "1189110259"
+        "id": "1189110259",
+        "w": 370,
+        "h": 240
       },
       {
         "label": "Detail / FAQ Motion",
@@ -416,7 +427,9 @@ const PROJECTS = {
         "loop": true,
         "sound": false,
         "aspect": "landscape",
-        "id": "1189104420"
+        "id": "1189104420",
+        "w": 372,
+        "h": 240
       }
     ]
   },
@@ -473,7 +486,9 @@ const PROJECTS = {
         "loop": true,
         "sound": false,
         "aspect": "portrait",
-        "id": "1076175174"
+        "id": "1076175174",
+        "w": 240,
+        "h": 294
       }
     ]
   },
@@ -709,7 +724,9 @@ const PROJECTS = {
         "loop": false,
         "sound": true,
         "aspect": "portrait",
-        "id": "1207335351"
+        "id": "1207335351",
+        "w": 426,
+        "h": 240
       },
       {
         "label": "Micro — Dialogue Scroll",
@@ -718,7 +735,9 @@ const PROJECTS = {
         "loop": true,
         "sound": false,
         "aspect": "portrait",
-        "id": "1208346755"
+        "id": "1208346755",
+        "w": 248,
+        "h": 240
       },
       {
         "label": "Micro — Ranking",
@@ -727,7 +746,9 @@ const PROJECTS = {
         "loop": true,
         "sound": false,
         "aspect": "portrait",
-        "id": "1208347489"
+        "id": "1208347489",
+        "w": 240,
+        "h": 396
       },
       {
         "label": "Micro — Banner Move",
@@ -736,7 +757,9 @@ const PROJECTS = {
         "loop": true,
         "sound": false,
         "aspect": "portrait",
-        "id": "1208347687"
+        "id": "1208347687",
+        "w": 426,
+        "h": 72
       }
     ]
   },
@@ -894,7 +917,9 @@ const PROJECTS = {
         "loop": false,
         "sound": true,
         "aspect": "landscape",
-        "id": "1207330032"
+        "id": "1207330032",
+        "w": 426,
+        "h": 240
       }
     ]
   },
@@ -990,7 +1015,9 @@ const PROJECTS = {
         "loop": true,
         "sound": true,
         "aspect": "horizontal",
-        "id": "1208348367"
+        "id": "1208348367",
+        "w": 320,
+        "h": 240
       },
       {
         "label": "Maze — Album Cover (square)",
@@ -999,7 +1026,9 @@ const PROJECTS = {
         "loop": true,
         "sound": true,
         "aspect": "square",
-        "id": "1208348143"
+        "id": "1208348143",
+        "w": 240,
+        "h": 240
       },
       {
         "label": "Maze — Story (vertical)",
@@ -1008,7 +1037,9 @@ const PROJECTS = {
         "loop": true,
         "sound": true,
         "aspect": "vertical",
-        "id": "1208348194"
+        "id": "1208348194",
+        "w": 240,
+        "h": 426
       },
       {
         "label": "Self Control — Album Cover (square)",
@@ -1017,7 +1048,9 @@ const PROJECTS = {
         "loop": true,
         "sound": true,
         "aspect": "square",
-        "id": "1208348144"
+        "id": "1208348144",
+        "w": 240,
+        "h": 240
       },
       {
         "label": "Self Control — Story (vertical)",
@@ -1026,7 +1059,9 @@ const PROJECTS = {
         "loop": true,
         "sound": true,
         "aspect": "vertical",
-        "id": "1208348141"
+        "id": "1208348141",
+        "w": 240,
+        "h": 426
       },
       {
         "label": "Why Don't You — Album Cover (square)",
@@ -1035,7 +1070,9 @@ const PROJECTS = {
         "loop": true,
         "sound": true,
         "aspect": "square",
-        "id": "1208348142"
+        "id": "1208348142",
+        "w": 240,
+        "h": 240
       },
       {
         "label": "Why Don't You — Story (vertical)",
@@ -1044,22 +1081,12 @@ const PROJECTS = {
         "loop": true,
         "sound": true,
         "aspect": "vertical",
-        "id": "1208348195"
+        "id": "1208348195",
+        "w": 240,
+        "h": 426
       }
     ],
     "website_order": [
-      {
-        "type": "image",
-        "file": "projects/16-motion-systems/a3.jpg"
-      },
-      {
-        "type": "image",
-        "file": "projects/16-motion-systems/a1.jpg"
-      },
-      {
-        "type": "image",
-        "file": "projects/16-motion-systems/a2.jpg"
-      },
       {
         "type": "video",
         "ref": "Maze — Album Cover (square)"
@@ -1087,6 +1114,18 @@ const PROJECTS = {
       {
         "type": "video",
         "ref": "Banner — Reel (horizontal)"
+      },
+      {
+        "type": "image",
+        "file": "projects/16-motion-systems/a3.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/16-motion-systems/a1.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/16-motion-systems/a2.jpg"
       }
     ]
   },
@@ -1141,7 +1180,9 @@ const PROJECTS = {
         "loop": true,
         "sound": true,
         "aspect": "landscape",
-        "id": "1190553634"
+        "id": "1190553634",
+        "w": 426,
+        "h": 240
       },
       {
         "label": "Documentation",
@@ -1150,15 +1191,14 @@ const PROJECTS = {
         "loop": false,
         "sound": true,
         "aspect": "landscape",
-        "id": "1190553634"
+        "id": "1190553634",
+        "w": 426,
+        "h": 240
       }
     ]
   }
 };
 
-// Map kept at 3 projects per spoke (the tuned, overlap-free layout). The new
-// projects take the slots the old duplicates used to hold; saydo is the single
-// remaining cross-listed project (Industrial + Inclusive). Rearrange freely.
 const TOPICS = [
   {
     "id": "industrial",

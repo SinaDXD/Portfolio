@@ -216,35 +216,60 @@ let currentPid = null;
 function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
 
 // ── Media (images + Vimeo video boxes) ─────────────────────────────
+// Real aspect ratio of a video (from its Vimeo w/h), so the box matches the
+// content exactly and there are no black letterbox/pillar bars.
+function videoAR(v) {
+  if (v.w && v.h) return v.w / v.h;
+  return ({ portrait: 9 / 16, vertical: 9 / 16, square: 1, landscape: 16 / 9, horizontal: 16 / 9 }[v.aspect]) || 16 / 9;
+}
+function isVertical(v) { return videoAR(v) < 0.85; }
 // A Vimeo iframe box. showcase/micro (or loop) → silent looping background
-// player; demo → normal click-to-play player with sound. Sized by `aspect`.
+// player; demo → normal click-to-play player with sound. Box is sized to the
+// video's true aspect ratio.
 function videoBox(v, title) {
   const loop = v.type === "showcase" || v.type === "micro" || v.loop;
   const src = loop
     ? `https://player.vimeo.com/video/${v.id}?background=1`
     : `https://player.vimeo.com/video/${v.id}`;
-  const aspect = v.aspect || "landscape";
-  return `<div class="project__video project__video--${aspect}">` +
+  const ar = videoAR(v);
+  const cls = ar < 0.85 ? "portrait" : (ar > 1.25 ? "wide" : "square");
+  const style = (v.w && v.h) ? ` style="aspect-ratio:${v.w} / ${v.h}"` : "";
+  return `<div class="project__video project__video--${cls}"${style}>` +
     `<iframe src="${src}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" ` +
     `allowfullscreen loading="lazy" title="${esc(v.label || title)}"></iframe></div>`;
 }
 // Build the media stack. If website_order is present, follow it exactly
 // (image by file, video by matching label); otherwise images then videos.
+// Consecutive vertical (story) videos are grouped into a side-by-side row.
 function mediaHTML(p) {
   const img = (src) => `<img src="${src}" alt="${esc(p.title)}" loading="lazy" />`;
   const byLabel = {};
   (p.videos || []).forEach((v) => { byLabel[v.label] = v; });
-  const parts = [];
+  const items = [];
   if (p.website_order && p.website_order.length) {
     for (const o of p.website_order) {
-      if (o.type === "image") parts.push(img(o.file));
-      else if (o.type === "video" && byLabel[o.ref]) parts.push(videoBox(byLabel[o.ref], p.title));
+      if (o.type === "image") items.push({ img: o.file });
+      else if (o.type === "video" && byLabel[o.ref]) items.push({ v: byLabel[o.ref] });
     }
   } else {
-    (p.images && p.images.length ? p.images : [p.img]).forEach((src) => parts.push(img(src)));
-    (p.videos || []).forEach((v) => parts.push(videoBox(v, p.title)));
+    (p.images && p.images.length ? p.images : [p.img]).forEach((src) => items.push({ img: src }));
+    (p.videos || []).forEach((v) => items.push({ v }));
   }
-  return parts.join("");
+  const vert = (it) => it.v && isVertical(it.v);
+  const out = [];
+  for (let i = 0; i < items.length; ) {
+    if (vert(items[i])) {
+      const group = [];
+      while (i < items.length && vert(items[i])) { group.push(items[i].v); i++; }
+      out.push(group.length >= 2
+        ? `<div class="project__video-row">${group.map((v) => videoBox(v, p.title)).join("")}</div>`
+        : videoBox(group[0], p.title));
+    } else {
+      out.push(items[i].img ? img(items[i].img) : videoBox(items[i].v, p.title));
+      i++;
+    }
+  }
+  return out.join("");
 }
 
 // fill the page with a project's content (no show/transition)
