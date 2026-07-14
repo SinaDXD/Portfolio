@@ -8,13 +8,13 @@ const PROJECTS = {
     "field": "Interaction Design · Design for Children · Game Design",
     "img": "projects/01-saydo/cover.jpg",
     "images": [
-      "projects/01-saydo/ui_smiley.jpg",
       "projects/01-saydo/cover.jpg",
       "projects/01-saydo/image_05.jpg",
       "projects/01-saydo/image_06.jpg",
-      "projects/01-saydo/main_image.jpg",
       "projects/01-saydo/ui_categories.jpg",
-      "projects/01-saydo/ui_sign.jpg"
+      "projects/01-saydo/ui_sign.jpg",
+      "projects/01-saydo/ui_smiley.jpg",
+      "projects/01-saydo/physical_pedestal.jpg"
     ],
     "summary": "A product designed to help DHH children aged 2 to 5 and their hearing parents build early communication through shared, play-based sign-language learning.",
     "sections": [
@@ -59,6 +59,40 @@ const PROJECTS = {
         "w": 426,
         "h": 240
       }
+    ],
+    "website_order": [
+      {
+        "type": "video",
+        "ref": "Step Motion"
+      },
+      {
+        "type": "image",
+        "file": "projects/01-saydo/cover.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/01-saydo/image_05.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/01-saydo/image_06.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/01-saydo/ui_categories.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/01-saydo/ui_sign.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/01-saydo/ui_smiley.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/01-saydo/physical_pedestal.jpg"
+      }
     ]
   },
   "revive": {
@@ -68,11 +102,11 @@ const PROJECTS = {
     "img": "projects/02-revive/cover.jpg",
     "images": [
       "projects/02-revive/cover.jpg",
+      "projects/02-revive/main_image.jpg",
       "projects/02-revive/image_02.jpg",
       "projects/02-revive/image_03.jpg",
-      "projects/02-revive/image_05.jpg",
       "projects/02-revive/image_06.jpg",
-      "projects/02-revive/main_image.jpg"
+      "projects/02-revive/image_05.jpg"
     ],
     "summary": "Working with the Mammut Repair Team, I helped rethink the repair experience as both a service and product opportunity, making repairs clearer for customers, more efficient for the team and more aligned with Mammut's long-term sustainability goals.",
     "sections": [
@@ -129,11 +163,11 @@ const PROJECTS = {
       },
       {
         "type": "image",
-        "file": "projects/02-revive/image_02.jpg"
+        "file": "projects/02-revive/main_image.jpg"
       },
       {
         "type": "image",
-        "file": "projects/02-revive/main_image.jpg"
+        "file": "projects/02-revive/image_02.jpg"
       },
       {
         "type": "image",
@@ -141,11 +175,11 @@ const PROJECTS = {
       },
       {
         "type": "image",
-        "file": "projects/02-revive/image_05.jpg"
+        "file": "projects/02-revive/image_06.jpg"
       },
       {
         "type": "image",
-        "file": "projects/02-revive/image_06.jpg"
+        "file": "projects/02-revive/image_05.jpg"
       }
     ]
   },
@@ -261,13 +295,13 @@ const PROJECTS = {
     "title": "By-Ber: Interactive Kids’ Chair",
     "subtitle": "An interactive add-on for children’s haircuts",
     "field": "Industrial Design · Interactive Design · Game Design",
-    "img": "projects/04-by-ber/cover.jpg",
+    "img": "projects/04-by-ber/image_06.jpg",
     "images": [
-      "projects/04-by-ber/main_image.jpg",
-      "projects/04-by-ber/image_05.jpg",
+      "projects/04-by-ber/image_06.jpg",
       "projects/04-by-ber/image_03.jpg",
+      "projects/04-by-ber/cover.jpg",
       "projects/04-by-ber/image_02.jpg",
-      "projects/04-by-ber/cover.jpg"
+      "projects/04-by-ber/image_05.jpg"
     ],
     "summary": "An interactive add-on that transforms the haircut experience for children aged 2–6 in Tehran barbershops, reducing stress and turning a fraught moment into engaging, cooperative play.",
     "sections": [
@@ -306,6 +340,32 @@ const PROJECTS = {
         "id": "1104931397",
         "w": 342,
         "h": 240
+      }
+    ],
+    "website_order": [
+      {
+        "type": "video",
+        "ref": "Project Video"
+      },
+      {
+        "type": "image",
+        "file": "projects/04-by-ber/image_06.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/04-by-ber/image_03.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/04-by-ber/cover.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/04-by-ber/image_02.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/04-by-ber/image_05.jpg"
       }
     ]
   },
@@ -365,12 +425,11 @@ const PROJECTS = {
     "img": "projects/06-now-going-out/cover.jpg",
     "images": [
       "projects/06-now-going-out/cover.jpg",
-      "projects/06-now-going-out/image_02.jpg",
-      "projects/06-now-going-out/image_03.jpg",
       "projects/06-now-going-out/image_04.jpg",
       "projects/06-now-going-out/image_05.jpg",
-      "projects/06-now-going-out/image_06.jpg",
-      "projects/06-now-going-out/main_image.jpg"
+      "projects/06-now-going-out/image_02.jpg",
+      "projects/06-now-going-out/image_03.jpg",
+      "projects/06-now-going-out/image_06.jpg"
     ],
     "summary": "NOW helps people plan their leisure time. The brief centred on mobile-first usability for an audience that included international tourists — accessible navigation across language barriers, in compact, easy-to-scan information.",
     "sections": [
@@ -402,28 +461,45 @@ const PROJECTS = {
     ],
     "year": "2020",
     "collaboration": "Vala Design Studio",
-    "role": "UX/Product design intern (Vala)"
+    "role": "UX/Product design intern (Vala)",
+    "website_order": [
+      {
+        "type": "image",
+        "file": "projects/06-now-going-out/cover.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/06-now-going-out/image_04.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/06-now-going-out/image_05.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/06-now-going-out/image_02.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/06-now-going-out/image_03.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/06-now-going-out/image_06.jpg"
+      }
+    ]
   },
   "barryland": {
     "title": "Barryland Redesign",
     "subtitle": "A process-led redesign for a more expressive museum experience",
     "field": "UX Design · UI Design",
-    "img": "projects/07-barryland/cover.jpg",
+    "img": "projects/07-barryland/current-screen-1.jpg",
     "images": [
-      "projects/07-barryland/cover.jpg",
-      "projects/07-barryland/Site Map Barryland.jpg",
       "projects/07-barryland/current-screen-1.jpg",
-      "projects/07-barryland/current-screen-2.jpg",
-      "projects/07-barryland/design-system-in-frame.jpg",
+      "projects/07-barryland/Site Map Barryland.jpg",
       "projects/07-barryland/design-system-out-of-frame.jpg",
-      "projects/07-barryland/hero-macbook.jpg",
-      "projects/07-barryland/image_02.jpg",
-      "projects/07-barryland/image_03.jpg",
-      "projects/07-barryland/key-page-overview.jpg",
-      "projects/07-barryland/key-page-ticket-shop.jpg",
-      "projects/07-barryland/main_image.jpg",
-      "projects/07-barryland/moodboard.jpg",
-      "projects/07-barryland/ux-sitemap-analysis.jpg"
+      "projects/07-barryland/pf/overview.jpg",
+      "projects/07-barryland/key-page-ticket-shop.jpg"
     ],
     "summary": "Barryland already had structure, but not much character. I treated the redesign as both a UX and interface-language problem: preserve the clarity of the existing site, then rebuild hierarchy, tone, and motion so the digital experience feels as lively and memorable as the museum itself.",
     "sections": [
@@ -483,6 +559,36 @@ const PROJECTS = {
         "id": "1189104420",
         "w": 372,
         "h": 240
+      }
+    ],
+    "website_order": [
+      {
+        "type": "video",
+        "ref": "Interaction Screen"
+      },
+      {
+        "type": "video",
+        "ref": "Detail / FAQ Motion"
+      },
+      {
+        "type": "image",
+        "file": "projects/07-barryland/current-screen-1.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/07-barryland/Site Map Barryland.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/07-barryland/design-system-out-of-frame.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/07-barryland/pf/overview.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/07-barryland/key-page-ticket-shop.jpg"
       }
     ]
   },
@@ -552,11 +658,14 @@ const PROJECTS = {
     "img": "projects/09-piezanet/cover.jpg",
     "images": [
       "projects/09-piezanet/cover.jpg",
-      "projects/09-piezanet/image_02.jpg",
-      "projects/09-piezanet/image_03.jpg",
-      "projects/09-piezanet/image_04.jpg",
-      "projects/09-piezanet/image_05.jpg",
-      "projects/09-piezanet/main_image.jpg"
+      "projects/09-piezanet/main_image.jpg",
+      "projects/09-piezanet/pf/logo_nobg.png",
+      "projects/09-piezanet/pf/brand_export.png",
+      "projects/09-piezanet/pf/ds.jpg",
+      "projects/09-piezanet/pf/handoff.jpg",
+      "projects/09-piezanet/pf/image_02.jpg",
+      "projects/09-piezanet/pf/image_05.jpg",
+      "projects/09-piezanet/pf/image_04.jpg"
     ],
     "summary": "Piezanet needed more than a visual refresh: the brand, catalog structure, and interface logic all felt disconnected. I rebuilt the identity, defined the token and component foundations, and translated them into a responsive commerce experience that improves product discovery, brand recognition, and developer handoff.",
     "sections": [
@@ -613,7 +722,45 @@ const PROJECTS = {
     ],
     "year": "2025",
     "collaboration": "Piezanet.com",
-    "role": "UI/UX & brand designer"
+    "role": "UI/UX & brand designer",
+    "website_order": [
+      {
+        "type": "image",
+        "file": "projects/09-piezanet/cover.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/09-piezanet/main_image.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/09-piezanet/pf/logo_nobg.png"
+      },
+      {
+        "type": "image",
+        "file": "projects/09-piezanet/pf/brand_export.png"
+      },
+      {
+        "type": "image",
+        "file": "projects/09-piezanet/pf/ds.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/09-piezanet/pf/handoff.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/09-piezanet/pf/image_02.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/09-piezanet/pf/image_05.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/09-piezanet/pf/image_04.jpg"
+      }
+    ]
   },
   "branch": {
     "title": "Branch",
@@ -665,17 +812,15 @@ const PROJECTS = {
     "title": "Reality Check",
     "subtitle": "Reframing Swisscovery for exploratory design research",
     "field": "UX Research · Thematic Analysis · Prototyping",
-    "img": "projects/11-reality-check/HERO_knowledge-map.jpg",
+    "img": "projects/11-reality-check/pf/beforeafter.jpg",
     "images": [
       "projects/11-reality-check/pf/beforeafter.jpg",
-      "projects/11-reality-check/pf/res1.jpg",
-      "projects/11-reality-check/pf/res2.jpg",
-      "projects/11-reality-check/pf/res3.jpg",
       "projects/11-reality-check/pf/glance.jpg",
       "projects/11-reality-check/pf/codes.jpg",
-      "projects/11-reality-check/pf/results_after_v2.png",
+      "projects/11-reality-check/pf/proto_mode.jpg",
       "projects/11-reality-check/pf/proto_guided.jpg",
-      "projects/11-reality-check/pf/kmap.jpg"
+      "projects/11-reality-check/pf/proto_results.jpg",
+      "projects/11-reality-check/pf/kmap_p.jpg"
     ],
     "summary": "Swisscovery is strong at known-item retrieval, but exploratory research behaves differently. Design researchers often begin with partial signals, adjacent fields, and unstable keywords. Through qualitative UX research, I identified where the current experience breaks down for discovery and designed a concept layer that better supports sensemaking, cross-disciplinary navigation, and research continuity.",
     "sections": [
@@ -717,7 +862,37 @@ const PROJECTS = {
     ],
     "year": "2026",
     "collaboration": "ECAL",
-    "role": "UX researcher"
+    "role": "UX researcher",
+    "website_order": [
+      {
+        "type": "image",
+        "file": "projects/11-reality-check/pf/beforeafter.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/11-reality-check/pf/glance.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/11-reality-check/pf/codes.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/11-reality-check/pf/proto_mode.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/11-reality-check/pf/proto_guided.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/11-reality-check/pf/proto_results.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/11-reality-check/pf/kmap_p.jpg"
+      }
+    ]
   },
   "cue": {
     "title": "Cue (Movie Picker)",
@@ -726,14 +901,13 @@ const PROJECTS = {
     "img": "projects/12-cue-movie-picker/Cover.jpg",
     "images": [
       "projects/12-cue-movie-picker/Cover.jpg",
+      "projects/12-cue-movie-picker/pf/atoms.jpg",
+      "projects/12-cue-movie-picker/pf/molecules.jpg",
+      "projects/12-cue-movie-picker/pf/blocks.jpg",
+      "projects/12-cue-movie-picker/pf/cells.jpg",
       "projects/12-cue-movie-picker/Hero_Last.jpg",
-      "projects/12-cue-movie-picker/New_Cover.jpg",
       "projects/12-cue-movie-picker/New_Hero.jpg",
-      "projects/12-cue-movie-picker/Fathollahi_Sina_MicroUI_Image01.jpg",
-      "projects/12-cue-movie-picker/Fathollahi_Sina_MicroUI_Image02.jpg",
-      "projects/12-cue-movie-picker/Fathollahi_Sina_MicroUI_Image03.jpg",
-      "projects/12-cue-movie-picker/Fathollahi_Sina_MicroUI_Image04.jpg",
-      "projects/12-cue-movie-picker/Fathollahi_Sina_MicroUI_Image05.jpg"
+      "projects/12-cue-movie-picker/New_Cover.jpg"
     ],
     "summary": "Cue is a high-fidelity component that lets you choose a film by its dialogue instead of posters or trailers. It reads like a script and is framed like a movie ticket — Courier type, black slug bars, blue marks for the words you can tap. Browse iconic lines, swipe to like, tap a word to set a lens, drag to rank, and reveal your match. Built as a strict atomic system, from a single tappable word up to the full picker.",
     "sections": [
@@ -811,25 +985,74 @@ const PROJECTS = {
         "w": 426,
         "h": 72
       }
+    ],
+    "website_order": [
+      {
+        "type": "video",
+        "ref": "Live Demo"
+      },
+      {
+        "type": "image",
+        "file": "projects/12-cue-movie-picker/Cover.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/12-cue-movie-picker/pf/atoms.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/12-cue-movie-picker/pf/molecules.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/12-cue-movie-picker/pf/blocks.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/12-cue-movie-picker/pf/cells.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/12-cue-movie-picker/Hero_Last.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/12-cue-movie-picker/New_Hero.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/12-cue-movie-picker/New_Cover.jpg"
+      },
+      {
+        "type": "video",
+        "ref": "Micro — Dialogue Scroll"
+      },
+      {
+        "type": "video",
+        "ref": "Micro — Ranking"
+      },
+      {
+        "type": "video",
+        "ref": "Micro — Banner Move"
+      }
     ]
   },
   "scan-everything": {
     "title": "Scan Everything",
     "subtitle": "An AI museum installation built around one simple interaction loop",
     "field": "UX/UI Design · Interaction Design · AI in Design · Prototyping",
-    "img": "projects/13-scan-everything/01_draw-by-hand.jpg",
+    "img": "projects/13-scan-everything/pf/ui_hero.jpg",
     "images": [
+      "projects/13-scan-everything/pf/ui_hero.jpg",
       "projects/13-scan-everything/pf/research_doc.jpg",
-      "projects/13-scan-everything/pf/install.jpg",
-      "projects/13-scan-everything/pf/invite.jpg",
-      "projects/13-scan-everything/pf/testplan.jpg",
-      "projects/13-scan-everything/pf/procedure.jpg",
+      "projects/13-scan-everything/pf/analysis_synthesis.jpg",
       "projects/13-scan-everything/pf/scan.jpg",
-      "projects/13-scan-everything/pf/sheet1_data.jpg",
-      "projects/13-scan-everything/pf/sheet2_changes.jpg",
+      "projects/13-scan-everything/pf/testplan.jpg",
+      "projects/13-scan-everything/03_installation-setup.jpg",
+      "projects/13-scan-everything/pf/procedure.jpg",
       "projects/13-scan-everything/pf/scan_before_v2.png",
       "projects/13-scan-everything/pf/scan_after_v2.png",
-      "projects/13-scan-everything/pf/ui_sign.jpg"
+      "projects/13-scan-everything/02_scan-the-card.jpg"
     ],
     "summary": "Scan Everything combines a physical gesture with an AI-supported digital response: draw by hand, scan the card, and add the result to a shared collection. My role was to shape that loop into a usable installation, test it with real visitors, and turn the evidence into concrete interaction improvements.",
     "sections": [
@@ -881,29 +1104,64 @@ const PROJECTS = {
     ],
     "year": "2026",
     "collaboration": "ECAL × Alimentarium Museum, Vevey",
-    "role": "UX/UI & interaction designer (with Youri Zermatten)"
+    "role": "UX/UI & interaction designer (with Youri Zermatten)",
+    "website_order": [
+      {
+        "type": "image",
+        "file": "projects/13-scan-everything/pf/ui_hero.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/13-scan-everything/pf/research_doc.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/13-scan-everything/pf/analysis_synthesis.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/13-scan-everything/pf/scan.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/13-scan-everything/pf/testplan.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/13-scan-everything/03_installation-setup.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/13-scan-everything/pf/procedure.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/13-scan-everything/pf/scan_before_v2.png"
+      },
+      {
+        "type": "image",
+        "file": "projects/13-scan-everything/pf/scan_after_v2.png"
+      },
+      {
+        "type": "image",
+        "file": "projects/13-scan-everything/02_scan-the-card.jpg"
+      }
+    ]
   },
   "knowledge-universe": {
     "title": "Knowledge Universe",
     "subtitle": "An attention-aware browsing companion (Beyond Click)",
     "field": "Interaction Design · AI in Design · Data Visualisation · Prototyping",
-    "img": "projects/14-beyond-click-knowledge-universe/Real_Near_Dashboard.jpg",
+    "img": "projects/14-beyond-click-knowledge-universe/Real_Grab.jpg",
     "images": [
-      "projects/14-beyond-click-knowledge-universe/Real_Near_Dashboard.jpg",
-      "projects/14-beyond-click-knowledge-universe/Fathollahi_Sina_Beyondclicks_HeroImage.jpg",
       "projects/14-beyond-click-knowledge-universe/Real_Grab.jpg",
-      "projects/14-beyond-click-knowledge-universe/Real_Long_Design.jpg",
-      "projects/14-beyond-click-knowledge-universe/Real_long_design_Detail.jpg",
       "projects/14-beyond-click-knowledge-universe/Fathollahi_Sina_BeyondClicks_Dashboard.jpg",
       "projects/14-beyond-click-knowledge-universe/Fathollahi_Sina_BeyondClicks_DesignKnowledge.jpg",
+      "projects/14-beyond-click-knowledge-universe/pf/grab.jpg",
       "projects/14-beyond-click-knowledge-universe/Fathollahi_Sina_BeyondClicks_Finance.jpg",
-      "projects/14-beyond-click-knowledge-universe/Fathollahi_Sina_BeyondClicks_FinanceDeck.jpg",
-      "projects/14-beyond-click-knowledge-universe/Fathollahi_Sina_BeyondClicks_GrabConcept.jpg",
-      "projects/14-beyond-click-knowledge-universe/Fathollahi_Sina_BeyondClicks_GrabfromWeb.jpg",
-      "projects/14-beyond-click-knowledge-universe/Fathollahi_Sina_BeyondClicks_TechnologyListview.jpg",
-      "projects/14-beyond-click-knowledge-universe/Fathollahi_Sina_BeyondClicks_TechnologyRadar.jpg",
-      "projects/14-beyond-click-knowledge-universe/Fathollahi_Sina_BeyondClicks_TechnologyRadarDetails01.jpg",
-      "projects/14-beyond-click-knowledge-universe/Fathollahi_Sina_BeyondClicks_TechnologyRadarDetails02.jpg"
+      "projects/14-beyond-click-knowledge-universe/pf/real_design.jpg",
+      "projects/14-beyond-click-knowledge-universe/pf/real_detail.jpg",
+      "projects/14-beyond-click-knowledge-universe/pf/real_grab.jpg"
     ],
     "summary": "As you read the web, the things you dwell on are quietly grabbed into a personal, living knowledge graph that reorganises itself — no clicks, no commands. An LLM reads each grab, classifies it, links it to earlier ones and continuously reshapes the world across three lenses. It turns passive browsing into a self-building map of what you care about.",
     "sections": [
@@ -962,6 +1220,44 @@ const PROJECTS = {
         "id": "1207330032",
         "w": 426,
         "h": 240
+      }
+    ],
+    "website_order": [
+      {
+        "type": "video",
+        "ref": "Project Video"
+      },
+      {
+        "type": "image",
+        "file": "projects/14-beyond-click-knowledge-universe/Real_Grab.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/14-beyond-click-knowledge-universe/Fathollahi_Sina_BeyondClicks_Dashboard.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/14-beyond-click-knowledge-universe/Fathollahi_Sina_BeyondClicks_DesignKnowledge.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/14-beyond-click-knowledge-universe/pf/grab.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/14-beyond-click-knowledge-universe/Fathollahi_Sina_BeyondClicks_Finance.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/14-beyond-click-knowledge-universe/pf/real_design.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/14-beyond-click-knowledge-universe/pf/real_detail.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/14-beyond-click-knowledge-universe/pf/real_grab.jpg"
       }
     ]
   },
@@ -1165,16 +1461,9 @@ const PROJECTS = {
     "field": "Creative Coding · Data Visualisation · Generative Design",
     "img": "projects/17-motion-rndr-sledgehammer/facecover.jpg",
     "images": [
-      "projects/17-motion-rndr-sledgehammer/p_silhouette.jpg",
       "projects/17-motion-rndr-sledgehammer/facecover.jpg",
-      "projects/17-motion-rndr-sledgehammer/p_decoding.jpg",
-      "projects/17-motion-rndr-sledgehammer/p_room.jpg",
-      "projects/17-motion-rndr-sledgehammer/p_faces.jpg",
-      "projects/17-motion-rndr-sledgehammer/p_watch.jpg",
       "projects/17-motion-rndr-sledgehammer/gif.jpg",
-      "projects/17-motion-rndr-sledgehammer/v_cubes.jpg",
-      "projects/17-motion-rndr-sledgehammer/v_particles.jpg",
-      "projects/17-motion-rndr-sledgehammer/v_source.jpg"
+      "projects/17-motion-rndr-sledgehammer/p_decoding.jpg"
     ],
     "summary": "With RNDR Studio, the team restructured the music video Sledgehammer through data visualisation — decomposing it into scenes, gestures, colours, beats and audio stems in OPENRNDR (with ML tooling), then reassembling that linear footage as a generative, projected installation.",
     "sections": [
@@ -1237,15 +1526,11 @@ const PROJECTS = {
       },
       {
         "type": "image",
-        "file": "projects/17-motion-rndr-sledgehammer/p_decoding.jpg"
-      },
-      {
-        "type": "image",
         "file": "projects/17-motion-rndr-sledgehammer/gif.jpg"
       },
       {
         "type": "image",
-        "file": "projects/17-motion-rndr-sledgehammer/v_source.jpg"
+        "file": "projects/17-motion-rndr-sledgehammer/p_decoding.jpg"
       }
     ]
   }
