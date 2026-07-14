@@ -88,7 +88,7 @@ const PHOTO_ANCHOR = {
   interaction: { barryland: [1, -1] },                 // bottom-left corner
   social:      { stillbloom: [1, -1] },                // photo up-right, clear of Revive's label
   inclusive:   { saydo: [-1, 1] },                     // top-right corner
-  product:     { tribecraft: [-1, -1] },               // bottom-right corner
+  product:     { saydo: [1, -1] },                     // saydo photo up-right, clear of By-Ber's label
 };
 
 const topics = TOPICS.map((t) => {

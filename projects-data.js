@@ -1544,9 +1544,9 @@ const TOPICS = [
     "angle": -90,
     "len": 360,
     "projects": [
-      "abb",
-      "byber",
-      "saydo"
+      "tribecraft",
+      "piezanet",
+      "branch"
     ]
   },
   {
@@ -1595,13 +1595,13 @@ const TOPICS = [
   },
   {
     "id": "product",
-    "label": "Experience design",
+    "label": "Industrial design",
     "angle": 180,
     "len": 380,
     "projects": [
-      "tribecraft",
-      "piezanet",
-      "branch"
+      "abb",
+      "byber",
+      "saydo"
     ]
   }
 ];
