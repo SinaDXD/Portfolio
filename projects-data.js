@@ -493,7 +493,7 @@ const PROJECTS = {
     "title": "Barryland Redesign",
     "subtitle": "A process-led redesign for a more expressive museum experience",
     "field": "UX Design · UI Design",
-    "img": "projects/07-barryland/current-screen-1.jpg",
+    "img": "projects/07-barryland/cover.jpg",
     "images": [
       "projects/07-barryland/current-screen-1.jpg",
       "projects/07-barryland/Site Map Barryland.jpg",
@@ -1544,8 +1544,8 @@ const TOPICS = [
     "angle": -90,
     "len": 360,
     "projects": [
-      "tribecraft",
-      "piezanet",
+      "scan-everything",
+      "cue",
       "branch"
     ]
   },
@@ -1557,7 +1557,7 @@ const TOPICS = [
     "projects": [
       "barryland",
       "now",
-      "cue"
+      "piezanet"
     ]
   },
   {
@@ -1589,7 +1589,7 @@ const TOPICS = [
     "len": 520,
     "projects": [
       "saydo",
-      "scan-everything",
+      "tribecraft",
       "knowledge-universe"
     ]
   },
