@@ -75,8 +75,9 @@ const PILE_OUT   = 92;    // where the photos rest (beyond the node) when piled
 //   • Product (points left)  → +bias swings its branches UP (front + top), off the Inclusive spoke.
 //   • Social  (points right) → +bias swings its branches DOWN, off the Interaction spoke above it.
 const FAN_TWEAK = {
-  product: { bias: 40, spread: 60 },
-  social:  { bias: 40, spread: 60 },
+  product:     { bias: 40, spread: 60 },
+  social:      { bias: 40, spread: 60 },
+  interaction: { spread: 104, stag: 1.7 },   // 4 branches — wider + more radial stagger so labels don't stack
 };
 
 // Per-discipline, per-project overrides for which corner of the photo the line's

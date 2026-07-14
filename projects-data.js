@@ -1546,7 +1546,7 @@ const TOPICS = [
     "projects": [
       "scan-everything",
       "cue",
-      "branch"
+      "knowledge-universe"
     ]
   },
   {
@@ -1557,7 +1557,8 @@ const TOPICS = [
     "projects": [
       "barryland",
       "now",
-      "piezanet"
+      "piezanet",
+      "branch"
     ]
   },
   {
@@ -1589,8 +1590,7 @@ const TOPICS = [
     "len": 520,
     "projects": [
       "saydo",
-      "tribecraft",
-      "knowledge-universe"
+      "tribecraft"
     ]
   },
   {
