@@ -8,19 +8,13 @@ const PROJECTS = {
     "field": "Interaction Design · Design for Children · Game Design",
     "img": "projects/01-saydo/cover.jpg",
     "images": [
+      "projects/01-saydo/ui_smiley.jpg",
       "projects/01-saydo/cover.jpg",
-      "projects/01-saydo/cmf_variants.jpg",
-      "projects/01-saydo/image_02.jpg",
-      "projects/01-saydo/image_03.jpg",
-      "projects/01-saydo/image_04.jpg",
       "projects/01-saydo/image_05.jpg",
       "projects/01-saydo/image_06.jpg",
       "projects/01-saydo/main_image.jpg",
-      "projects/01-saydo/physical_pedestal.jpg",
-      "projects/01-saydo/product_iso.jpg",
       "projects/01-saydo/ui_categories.jpg",
-      "projects/01-saydo/ui_sign.jpg",
-      "projects/01-saydo/ui_smiley.jpg"
+      "projects/01-saydo/ui_sign.jpg"
     ],
     "summary": "A product designed to help DHH children aged 2 to 5 and their hearing parents build early communication through shared, play-based sign-language learning.",
     "sections": [
@@ -123,6 +117,36 @@ const PROJECTS = {
         "w": 426,
         "h": 240
       }
+    ],
+    "website_order": [
+      {
+        "type": "video",
+        "ref": "Project Video"
+      },
+      {
+        "type": "image",
+        "file": "projects/02-revive/cover.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/02-revive/image_02.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/02-revive/main_image.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/02-revive/image_03.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/02-revive/image_05.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/02-revive/image_06.jpg"
+      }
     ]
   },
   "abb": {
@@ -201,6 +225,36 @@ const PROJECTS = {
         "w": 360,
         "h": 240
       }
+    ],
+    "website_order": [
+      {
+        "type": "video",
+        "ref": "Prototypes"
+      },
+      {
+        "type": "image",
+        "file": "projects/03-abb-ev-charger/cover.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/03-abb-ev-charger/image_02.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/03-abb-ev-charger/image_03.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/03-abb-ev-charger/image_04.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/03-abb-ev-charger/image_05.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/03-abb-ev-charger/main_image.jpg"
+      }
     ]
   },
   "byber": {
@@ -209,12 +263,11 @@ const PROJECTS = {
     "field": "Industrial Design · Interactive Design · Game Design",
     "img": "projects/04-by-ber/cover.jpg",
     "images": [
-      "projects/04-by-ber/cover.jpg",
-      "projects/04-by-ber/image_02.jpg",
-      "projects/04-by-ber/image_03.jpg",
+      "projects/04-by-ber/main_image.jpg",
       "projects/04-by-ber/image_05.jpg",
-      "projects/04-by-ber/image_06.jpg",
-      "projects/04-by-ber/main_image.jpg"
+      "projects/04-by-ber/image_03.jpg",
+      "projects/04-by-ber/image_02.jpg",
+      "projects/04-by-ber/cover.jpg"
     ],
     "summary": "An interactive add-on that transforms the haircut experience for children aged 2–6 in Tehran barbershops, reducing stress and turning a fraught moment into engaging, cooperative play.",
     "sections": [
@@ -614,18 +667,15 @@ const PROJECTS = {
     "field": "UX Research · Thematic Analysis · Prototyping",
     "img": "projects/11-reality-check/HERO_knowledge-map.jpg",
     "images": [
-      "projects/11-reality-check/HERO_knowledge-map.jpg",
-      "projects/11-reality-check/current-swisscovery-interface.jpg",
-      "projects/11-reality-check/persona-anna.jpg",
-      "projects/11-reality-check/before-after_current-vs-new.jpg",
-      "projects/11-reality-check/01_knowledge-map.jpg",
-      "projects/11-reality-check/02_research-path-and-boards.jpg",
-      "projects/11-reality-check/03_how-the-new-system-works.jpg",
-      "projects/11-reality-check/04_promise-and-mechanism.jpg",
-      "projects/11-reality-check/01_research-method.jpg",
-      "projects/11-reality-check/02_thematic-analysis.jpg",
-      "projects/11-reality-check/03_five-themes.jpg",
-      "projects/11-reality-check/title-cover.jpg"
+      "projects/11-reality-check/pf/beforeafter.jpg",
+      "projects/11-reality-check/pf/res1.jpg",
+      "projects/11-reality-check/pf/res2.jpg",
+      "projects/11-reality-check/pf/res3.jpg",
+      "projects/11-reality-check/pf/glance.jpg",
+      "projects/11-reality-check/pf/codes.jpg",
+      "projects/11-reality-check/pf/results_after_v2.png",
+      "projects/11-reality-check/pf/proto_guided.jpg",
+      "projects/11-reality-check/pf/kmap.jpg"
     ],
     "summary": "Swisscovery is strong at known-item retrieval, but exploratory research behaves differently. Design researchers often begin with partial signals, adjacent fields, and unstable keywords. Through qualitative UX research, I identified where the current experience breaks down for discovery and designed a concept layer that better supports sensemaking, cross-disciplinary navigation, and research continuity.",
     "sections": [
@@ -769,25 +819,17 @@ const PROJECTS = {
     "field": "UX/UI Design · Interaction Design · AI in Design · Prototyping",
     "img": "projects/13-scan-everything/01_draw-by-hand.jpg",
     "images": [
-      "projects/13-scan-everything/01_draw-by-hand.jpg",
-      "projects/13-scan-everything/HERO_touch-to-begin.jpg",
-      "projects/13-scan-everything/BA_2_drawing-flow.jpg",
-      "projects/13-scan-everything/ba_1_onboarding.jpg",
-      "projects/13-scan-everything/ba_2_draw-flow.jpg",
-      "projects/13-scan-everything/ba_3_scanning.jpg",
-      "projects/13-scan-everything/ba_4_scan-result.jpg",
-      "projects/13-scan-everything/ba_5_sign-drawing.jpg",
-      "projects/13-scan-everything/BA_1_onboarding-2.jpg",
-      "projects/13-scan-everything/BA_2_drawing-flow-2.jpg",
-      "projects/13-scan-everything/BA_3_scanning-2.jpg",
-      "projects/13-scan-everything/BA_4_scan-result-2.jpg",
-      "projects/13-scan-everything/BA_5_sign-drawing-2.jpg",
-      "projects/13-scan-everything/Sina_Fathollahi.jpg",
-      "projects/13-scan-everything/02_scan-the-card.jpg",
-      "projects/13-scan-everything/03_installation-setup.jpg",
-      "projects/13-scan-everything/04_scanning_ui.jpg",
-      "projects/13-scan-everything/05_collection-unlocked_ui.jpg",
-      "projects/13-scan-everything/06_sign-your-drawing_ui.jpg"
+      "projects/13-scan-everything/pf/research_doc.jpg",
+      "projects/13-scan-everything/pf/install.jpg",
+      "projects/13-scan-everything/pf/invite.jpg",
+      "projects/13-scan-everything/pf/testplan.jpg",
+      "projects/13-scan-everything/pf/procedure.jpg",
+      "projects/13-scan-everything/pf/scan.jpg",
+      "projects/13-scan-everything/pf/sheet1_data.jpg",
+      "projects/13-scan-everything/pf/sheet2_changes.jpg",
+      "projects/13-scan-everything/pf/scan_before_v2.png",
+      "projects/13-scan-everything/pf/scan_after_v2.png",
+      "projects/13-scan-everything/pf/ui_sign.jpg"
     ],
     "summary": "Scan Everything combines a physical gesture with an AI-supported digital response: draw by hand, scan the card, and add the result to a shared collection. My role was to shape that loop into a usable installation, test it with real visitors, and turn the evidence into concrete interaction improvements.",
     "sections": [
@@ -1114,18 +1156,6 @@ const PROJECTS = {
       {
         "type": "video",
         "ref": "Banner — Reel (horizontal)"
-      },
-      {
-        "type": "image",
-        "file": "projects/16-motion-systems/a3.jpg"
-      },
-      {
-        "type": "image",
-        "file": "projects/16-motion-systems/a1.jpg"
-      },
-      {
-        "type": "image",
-        "file": "projects/16-motion-systems/a2.jpg"
       }
     ]
   },
@@ -1133,7 +1163,7 @@ const PROJECTS = {
     "title": "Sledgehammer",
     "subtitle": "Decoding a music video with creative code",
     "field": "Creative Coding · Data Visualisation · Generative Design",
-    "img": "projects/17-motion-rndr-sledgehammer/p_silhouette.jpg",
+    "img": "projects/17-motion-rndr-sledgehammer/facecover.jpg",
     "images": [
       "projects/17-motion-rndr-sledgehammer/p_silhouette.jpg",
       "projects/17-motion-rndr-sledgehammer/facecover.jpg",
@@ -1194,6 +1224,28 @@ const PROJECTS = {
         "id": "1190553634",
         "w": 426,
         "h": 240
+      }
+    ],
+    "website_order": [
+      {
+        "type": "video",
+        "ref": "Prototype 01"
+      },
+      {
+        "type": "image",
+        "file": "projects/17-motion-rndr-sledgehammer/facecover.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/17-motion-rndr-sledgehammer/p_decoding.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/17-motion-rndr-sledgehammer/gif.jpg"
+      },
+      {
+        "type": "image",
+        "file": "projects/17-motion-rndr-sledgehammer/v_source.jpg"
       }
     ]
   }

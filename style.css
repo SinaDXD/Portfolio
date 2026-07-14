@@ -395,6 +395,7 @@ body.view-grid .hint { display: none; }
 .project__nav { display: none; }
 .project.from-grid .project__full { display: none; }
 .project.from-grid .project__nav { display: block; }
+.project.is-full .project__nav { display: block; }  /* full screen (incl. map mode) shows prev/next */
 /* full-screen project — panel covers the whole viewport, no map gutter / divider */
 .project.is-full .project__grid { width: 100%; border-left: 0; }
 .project__grid {
@@ -566,6 +567,8 @@ body.view-grid .hint { display: none; }
   }
   .about__photo { position: static; max-width: 300px; }
   .about__close { top: 1rem; left: 1rem; }
+  .about__skills { text-decoration: none; }          /* no hover on touch */
+  .about__skills-gif { display: none; }              /* hover-only easter egg; would overflow on phones */
 }
 @media (prefers-reduced-motion: reduce) {
   * { transition-duration: 0.01ms !important; }

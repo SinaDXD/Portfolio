@@ -283,7 +283,8 @@ function fillProject(pid) {
   // Drop any section that just repeats the one-line summary (the "OVERVIEW"
   // sections duplicate it), so the lead isn't shown twice.
   const norm = (t) => (t || "").replace(/\s+/g, " ").trim().toLowerCase();
-  const sections = (p.sections || []).filter((s) => norm(s.body) !== norm(p.summary));
+  const sumKey = norm(p.summary).slice(0, 50);
+  const sections = (p.sections || []).filter((s) => !(sumKey && norm(s.body).slice(0, 50) === sumKey));
   pv.querySelector("[data-project-desc]").innerHTML =
     (metaLine ? `<p class="project__metaline">${esc(metaLine)}</p>` : "") +
     (p.summary ? `<p class="project__lead">${esc(p.summary)}</p>` : "") +
@@ -408,7 +409,7 @@ document.querySelector("[data-home]").addEventListener("click", (e) => { e.preve
 
 // ── Grid view ─────────────────────────────────────────────────────
 const gridInner = document.querySelector("[data-grid-inner]");
-Object.entries(PROJECTS).forEach(([pid, p]) => {
+Object.entries(PROJECTS).reverse().forEach(([pid, p]) => {
   const cell = document.createElement("button");
   cell.type = "button"; cell.className = "cell"; cell.dataset.pid = pid;
   cell.innerHTML = `<img src="${p.img}" alt="${p.title}" loading="lazy" /><span class="cell__name">${p.title}</span>`;
