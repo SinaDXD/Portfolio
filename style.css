@@ -486,6 +486,26 @@ body.view-grid .hint { display: none; }
 .about__label { margin: 0 0 0.7rem; font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
 .about__title { margin: 0 0 1.3rem; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 500; line-height: 1.05; letter-spacing: -0.01em; }
 .about__lead { margin: 0 0 2.4rem; font-size: 1.08rem; line-height: 1.6; max-width: 46ch; color: var(--ink); }
+.about__bio { margin: 0 0 2.4rem; max-width: 46ch; }
+.about__bio p { margin: 0 0 1rem; font-size: 1.05rem; line-height: 1.6; color: var(--ink); }
+.about__bio p:first-child { font-size: 1.08rem; }
+/* the "very particular set of skills" easter egg */
+.about__skills {
+  position: relative; text-decoration: underline; text-underline-offset: 3px;
+  text-decoration-thickness: 1px; cursor: help;
+}
+.about__skills-gif {
+  position: absolute; left: 0; bottom: 100%;
+  width: 300px; max-width: 62vw; height: auto; display: block;
+  margin-bottom: 10px; border-radius: 5px; box-shadow: 0 18px 44px rgba(21, 20, 15, 0.32);
+  opacity: 0; visibility: hidden; transform: translateY(6px) scale(0.97);
+  transition: opacity 0.2s ease, transform 0.2s ease; pointer-events: none; z-index: 6;
+}
+.about__skills:hover .about__skills-gif,
+.about__skills:focus .about__skills-gif,
+.about__skills:focus-visible .about__skills-gif {
+  opacity: 1; visibility: visible; transform: translateY(0) scale(1);
+}
 .about__heading {
   margin: 2rem 0 0.8rem; font-size: 0.72rem; font-weight: 600;
   letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink);
