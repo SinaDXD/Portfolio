@@ -18,5 +18,3 @@ node_modules/
 # Claude Code local settings
 .claude/
 
-# dev helper
-contact-sheet.html

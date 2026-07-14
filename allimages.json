@@ -1,0 +1,341 @@
+{
+ "saydo": {
+  "title": "SAYDO",
+  "images": [
+   "projects/01-saydo/cmf_variants.jpg",
+   "projects/01-saydo/cover.jpg",
+   "projects/01-saydo/image_02.jpg",
+   "projects/01-saydo/image_03.jpg",
+   "projects/01-saydo/image_04.jpg",
+   "projects/01-saydo/image_05.jpg",
+   "projects/01-saydo/image_06.jpg",
+   "projects/01-saydo/main_image.jpg",
+   "projects/01-saydo/physical_pedestal.jpg",
+   "projects/01-saydo/product_iso.jpg",
+   "projects/01-saydo/ui_categories.jpg",
+   "projects/01-saydo/ui_sign.jpg",
+   "projects/01-saydo/ui_smiley.jpg"
+  ]
+ },
+ "revive": {
+  "title": "Revive — Mammut Repair",
+  "images": [
+   "projects/02-revive/cover.jpg",
+   "projects/02-revive/image_02.jpg",
+   "projects/02-revive/image_03.jpg",
+   "projects/02-revive/image_05.jpg",
+   "projects/02-revive/image_06.jpg",
+   "projects/02-revive/main_image.jpg"
+  ]
+ },
+ "abb": {
+  "title": "ABB EV Charger",
+  "images": [
+   "projects/03-abb-ev-charger/cover.jpg",
+   "projects/03-abb-ev-charger/image_02.jpg",
+   "projects/03-abb-ev-charger/image_03.jpg",
+   "projects/03-abb-ev-charger/image_04.jpg",
+   "projects/03-abb-ev-charger/image_05.jpg",
+   "projects/03-abb-ev-charger/main_image.jpg"
+  ]
+ },
+ "byber": {
+  "title": "By-Ber: Interactive Kids’ Chair",
+  "images": [
+   "projects/04-by-ber/cover.jpg",
+   "projects/04-by-ber/image_02.jpg",
+   "projects/04-by-ber/image_03.jpg",
+   "projects/04-by-ber/image_05.jpg",
+   "projects/04-by-ber/image_06.jpg",
+   "projects/04-by-ber/main_image.jpg"
+  ]
+ },
+ "tribecraft": {
+  "title": "Projects at Tribecraft",
+  "images": [
+   "projects/05-tribecraft/cover.jpg",
+   "projects/05-tribecraft/image_02.jpg",
+   "projects/05-tribecraft/image_03.jpg",
+   "projects/05-tribecraft/image_04.jpg",
+   "projects/05-tribecraft/main_image.jpg"
+  ]
+ },
+ "now": {
+  "title": "NOW — Going Out",
+  "images": [
+   "projects/06-now-going-out/cover.jpg",
+   "projects/06-now-going-out/image_02.jpg",
+   "projects/06-now-going-out/image_03.jpg",
+   "projects/06-now-going-out/image_04.jpg",
+   "projects/06-now-going-out/image_05.jpg",
+   "projects/06-now-going-out/image_06.jpg",
+   "projects/06-now-going-out/main_image.jpg"
+  ]
+ },
+ "barryland": {
+  "title": "Barryland Redesign",
+  "images": [
+   "projects/07-barryland/Site Map Barryland.jpg",
+   "projects/07-barryland/cover.jpg",
+   "projects/07-barryland/current-screen-1.jpg",
+   "projects/07-barryland/current-screen-2.jpg",
+   "projects/07-barryland/design-system-in-frame.jpg",
+   "projects/07-barryland/design-system-out-of-frame.jpg",
+   "projects/07-barryland/hero-macbook.jpg",
+   "projects/07-barryland/image_02.jpg",
+   "projects/07-barryland/image_03.jpg",
+   "projects/07-barryland/key-page-overview.jpg",
+   "projects/07-barryland/key-page-ticket-shop.jpg",
+   "projects/07-barryland/main_image.jpg",
+   "projects/07-barryland/moodboard.jpg",
+   "projects/07-barryland/ux-sitemap-analysis.jpg",
+   "projects/07-barryland/pf/cs1.jpg",
+   "projects/07-barryland/pf/cs2.jpg",
+   "projects/07-barryland/pf/ds_in.jpg",
+   "projects/07-barryland/pf/ds_out.jpg",
+   "projects/07-barryland/pf/faq.jpg",
+   "projects/07-barryland/pf/hero.jpg",
+   "projects/07-barryland/pf/overview.jpg",
+   "projects/07-barryland/pf/reach.jpg",
+   "projects/07-barryland/pf/sitemap.jpg",
+   "projects/07-barryland/pf/visit.jpg"
+  ]
+ },
+ "stillbloom": {
+  "title": "Stillbloom",
+  "images": [
+   "projects/08-stillbloom/cover.jpg",
+   "projects/08-stillbloom/image_02.jpg",
+   "projects/08-stillbloom/image_03.jpg",
+   "projects/08-stillbloom/image_04.jpg",
+   "projects/08-stillbloom/image_05.jpg",
+   "projects/08-stillbloom/image_06.jpg",
+   "projects/08-stillbloom/main_image.jpg"
+  ]
+ },
+ "piezanet": {
+  "title": "Piezanet",
+  "images": [
+   "projects/09-piezanet/cover.jpg",
+   "projects/09-piezanet/image_02.jpg",
+   "projects/09-piezanet/image_03.jpg",
+   "projects/09-piezanet/image_04.jpg",
+   "projects/09-piezanet/image_05.jpg",
+   "projects/09-piezanet/main_image.jpg",
+   "projects/09-piezanet/pf/brand.jpg",
+   "projects/09-piezanet/pf/brand_export.png",
+   "projects/09-piezanet/pf/ds.jpg",
+   "projects/09-piezanet/pf/handoff.jpg",
+   "projects/09-piezanet/pf/handoff_export.png",
+   "projects/09-piezanet/pf/image_02.jpg",
+   "projects/09-piezanet/pf/image_03.jpg",
+   "projects/09-piezanet/pf/image_04.jpg",
+   "projects/09-piezanet/pf/image_05.jpg",
+   "projects/09-piezanet/pf/logo_nobg.png",
+   "projects/09-piezanet/pf/main_image.jpg",
+   "projects/09-piezanet/pf/pages.jpg",
+   "projects/09-piezanet/pf/pages_export.png",
+   "projects/09-piezanet/pf/pcover.jpg",
+   "projects/09-piezanet/pf/system.jpg",
+   "projects/09-piezanet/pf/system_export.png"
+  ]
+ },
+ "branch": {
+  "title": "Branch",
+  "images": [
+   "projects/10-branch/cover.jpg",
+   "projects/10-branch/image_02.jpg",
+   "projects/10-branch/image_03.jpg",
+   "projects/10-branch/image_04.jpg",
+   "projects/10-branch/image_05.jpg",
+   "projects/10-branch/image_06.jpg",
+   "projects/10-branch/main_image.jpg"
+  ]
+ },
+ "reality-check": {
+  "title": "Reality Check",
+  "images": [
+   "projects/11-reality-check/01_knowledge-map.jpg",
+   "projects/11-reality-check/01_research-method.jpg",
+   "projects/11-reality-check/02_research-path-and-boards.jpg",
+   "projects/11-reality-check/02_thematic-analysis.jpg",
+   "projects/11-reality-check/03_five-themes.jpg",
+   "projects/11-reality-check/03_how-the-new-system-works.jpg",
+   "projects/11-reality-check/04_promise-and-mechanism.jpg",
+   "projects/11-reality-check/HERO_knowledge-map.jpg",
+   "projects/11-reality-check/before-after_current-vs-new.jpg",
+   "projects/11-reality-check/current-swisscovery-interface.jpg",
+   "projects/11-reality-check/persona-anna.jpg",
+   "projects/11-reality-check/title-cover.jpg",
+   "projects/11-reality-check/pf/beforeafter.jpg",
+   "projects/11-reality-check/pf/codes.jpg",
+   "projects/11-reality-check/pf/current.jpg",
+   "projects/11-reality-check/pf/glance.jpg",
+   "projects/11-reality-check/pf/hero.jpg",
+   "projects/11-reality-check/pf/homepage.jpg",
+   "projects/11-reality-check/pf/kmap.jpg",
+   "projects/11-reality-check/pf/kmap_p.jpg",
+   "projects/11-reality-check/pf/proto_guided.jpg",
+   "projects/11-reality-check/pf/proto_mode.jpg",
+   "projects/11-reality-check/pf/proto_results.jpg",
+   "projects/11-reality-check/pf/res1.jpg",
+   "projects/11-reality-check/pf/res2.jpg",
+   "projects/11-reality-check/pf/res3.jpg",
+   "projects/11-reality-check/pf/results_after_v2.png"
+  ]
+ },
+ "cue": {
+  "title": "Cue (Movie Picker)",
+  "images": [
+   "projects/12-cue-movie-picker/Cover.jpg",
+   "projects/12-cue-movie-picker/Fathollahi_Sina_MicroUI_Image01.jpg",
+   "projects/12-cue-movie-picker/Fathollahi_Sina_MicroUI_Image02.jpg",
+   "projects/12-cue-movie-picker/Fathollahi_Sina_MicroUI_Image03.jpg",
+   "projects/12-cue-movie-picker/Fathollahi_Sina_MicroUI_Image04.jpg",
+   "projects/12-cue-movie-picker/Fathollahi_Sina_MicroUI_Image05.jpg",
+   "projects/12-cue-movie-picker/Hero_Last.jpg",
+   "projects/12-cue-movie-picker/New_Cover.jpg",
+   "projects/12-cue-movie-picker/New_Hero.jpg",
+   "projects/12-cue-movie-picker/pf/atoms.jpg",
+   "projects/12-cue-movie-picker/pf/blocks.jpg",
+   "projects/12-cue-movie-picker/pf/browse.jpg",
+   "projects/12-cue-movie-picker/pf/cells.jpg",
+   "projects/12-cue-movie-picker/pf/cover.jpg",
+   "projects/12-cue-movie-picker/pf/hero.jpg",
+   "projects/12-cue-movie-picker/pf/herolast.jpg",
+   "projects/12-cue-movie-picker/pf/info.jpg",
+   "projects/12-cue-movie-picker/pf/molecules.jpg",
+   "projects/12-cue-movie-picker/pf/rank.jpg",
+   "projects/12-cue-movie-picker/pf/result.jpg",
+   "projects/12-cue-movie-picker/pf/s1.jpg",
+   "projects/12-cue-movie-picker/pf/s2.jpg",
+   "projects/12-cue-movie-picker/pf/s3.jpg",
+   "projects/12-cue-movie-picker/pf/s4.jpg",
+   "projects/12-cue-movie-picker/pf/s5.jpg",
+   "projects/12-cue-movie-picker/pf/style.jpg"
+  ]
+ },
+ "scan-everything": {
+  "title": "Scan Everything",
+  "images": [
+   "projects/13-scan-everything/01_draw-by-hand.jpg",
+   "projects/13-scan-everything/02_scan-the-card.jpg",
+   "projects/13-scan-everything/03_installation-setup.jpg",
+   "projects/13-scan-everything/04_scanning_ui.jpg",
+   "projects/13-scan-everything/05_collection-unlocked_ui.jpg",
+   "projects/13-scan-everything/06_sign-your-drawing_ui.jpg",
+   "projects/13-scan-everything/BA_1_onboarding-2.jpg",
+   "projects/13-scan-everything/BA_2_drawing-flow-2.jpg",
+   "projects/13-scan-everything/BA_2_drawing-flow.jpg",
+   "projects/13-scan-everything/BA_3_scanning-2.jpg",
+   "projects/13-scan-everything/BA_4_scan-result-2.jpg",
+   "projects/13-scan-everything/BA_5_sign-drawing-2.jpg",
+   "projects/13-scan-everything/HERO_touch-to-begin.jpg",
+   "projects/13-scan-everything/Sina_Fathollahi.jpg",
+   "projects/13-scan-everything/ba_1_onboarding.jpg",
+   "projects/13-scan-everything/ba_2_draw-flow.jpg",
+   "projects/13-scan-everything/ba_3_scanning.jpg",
+   "projects/13-scan-everything/ba_4_scan-result.jpg",
+   "projects/13-scan-everything/ba_5_sign-drawing.jpg",
+   "projects/13-scan-everything/pf/analysis_map.jpg",
+   "projects/13-scan-everything/pf/analysis_matrix.jpg",
+   "projects/13-scan-everything/pf/analysis_synthesis.jpg",
+   "projects/13-scan-everything/pf/ba_onb.jpg",
+   "projects/13-scan-everything/pf/ba_res.jpg",
+   "projects/13-scan-everything/pf/ba_sign.jpg",
+   "projects/13-scan-everything/pf/draw.jpg",
+   "projects/13-scan-everything/pf/install.jpg",
+   "projects/13-scan-everything/pf/invite.jpg",
+   "projects/13-scan-everything/pf/procedure.jpg",
+   "projects/13-scan-everything/pf/research_doc.jpg",
+   "projects/13-scan-everything/pf/scan.jpg",
+   "projects/13-scan-everything/pf/scan_after.jpg",
+   "projects/13-scan-everything/pf/scan_after_v2.png",
+   "projects/13-scan-everything/pf/scan_before.jpg",
+   "projects/13-scan-everything/pf/scan_before_v2.png",
+   "projects/13-scan-everything/pf/setup.jpg",
+   "projects/13-scan-everything/pf/sheet1_data.jpg",
+   "projects/13-scan-everything/pf/sheet2_changes.jpg",
+   "projects/13-scan-everything/pf/testplan.jpg",
+   "projects/13-scan-everything/pf/ui_coll.jpg",
+   "projects/13-scan-everything/pf/ui_hero.jpg",
+   "projects/13-scan-everything/pf/ui_scan.jpg",
+   "projects/13-scan-everything/pf/ui_sign.jpg"
+  ]
+ },
+ "knowledge-universe": {
+  "title": "Knowledge Universe",
+  "images": [
+   "projects/14-beyond-click-knowledge-universe/Fathollahi_Sina_BeyondClicks_Dashboard.jpg",
+   "projects/14-beyond-click-knowledge-universe/Fathollahi_Sina_BeyondClicks_DesignKnowledge.jpg",
+   "projects/14-beyond-click-knowledge-universe/Fathollahi_Sina_BeyondClicks_Finance.jpg",
+   "projects/14-beyond-click-knowledge-universe/Fathollahi_Sina_BeyondClicks_FinanceDeck.jpg",
+   "projects/14-beyond-click-knowledge-universe/Fathollahi_Sina_BeyondClicks_GrabConcept.jpg",
+   "projects/14-beyond-click-knowledge-universe/Fathollahi_Sina_BeyondClicks_GrabfromWeb.jpg",
+   "projects/14-beyond-click-knowledge-universe/Fathollahi_Sina_BeyondClicks_TechnologyListview.jpg",
+   "projects/14-beyond-click-knowledge-universe/Fathollahi_Sina_BeyondClicks_TechnologyRadar.jpg",
+   "projects/14-beyond-click-knowledge-universe/Fathollahi_Sina_BeyondClicks_TechnologyRadarDetails01.jpg",
+   "projects/14-beyond-click-knowledge-universe/Fathollahi_Sina_BeyondClicks_TechnologyRadarDetails02.jpg",
+   "projects/14-beyond-click-knowledge-universe/Fathollahi_Sina_Beyondclicks_HeroImage.jpg",
+   "projects/14-beyond-click-knowledge-universe/Real_Grab.jpg",
+   "projects/14-beyond-click-knowledge-universe/Real_Long_Design.jpg",
+   "projects/14-beyond-click-knowledge-universe/Real_Near_Dashboard.jpg",
+   "projects/14-beyond-click-knowledge-universe/Real_long_design_Detail.jpg",
+   "projects/14-beyond-click-knowledge-universe/pf/big_dash.jpg",
+   "projects/14-beyond-click-knowledge-universe/pf/big_design.jpg",
+   "projects/14-beyond-click-knowledge-universe/pf/big_techlist.jpg",
+   "projects/14-beyond-click-knowledge-universe/pf/dash.jpg",
+   "projects/14-beyond-click-knowledge-universe/pf/design.jpg",
+   "projects/14-beyond-click-knowledge-universe/pf/finance.jpg",
+   "projects/14-beyond-click-knowledge-universe/pf/finance2.jpg",
+   "projects/14-beyond-click-knowledge-universe/pf/grab.jpg",
+   "projects/14-beyond-click-knowledge-universe/pf/grabweb.jpg",
+   "projects/14-beyond-click-knowledge-universe/pf/hero.jpg",
+   "projects/14-beyond-click-knowledge-universe/pf/radar.jpg",
+   "projects/14-beyond-click-knowledge-universe/pf/radar1.jpg",
+   "projects/14-beyond-click-knowledge-universe/pf/radar2.jpg",
+   "projects/14-beyond-click-knowledge-universe/pf/real_dash.jpg",
+   "projects/14-beyond-click-knowledge-universe/pf/real_design.jpg",
+   "projects/14-beyond-click-knowledge-universe/pf/real_detail.jpg",
+   "projects/14-beyond-click-knowledge-universe/pf/real_grab.jpg",
+   "projects/14-beyond-click-knowledge-universe/pf/techlist.jpg"
+  ]
+ },
+ "januery": {
+  "title": "Januer Card",
+  "images": [
+   "projects/15-januer-card/image_02.jpg",
+   "projects/15-januer-card/image_03.jpg",
+   "projects/15-januer-card/image_04.jpg",
+   "projects/15-januer-card/image_05.jpg",
+   "projects/15-januer-card/main_image.jpg"
+  ]
+ },
+ "nd-music": {
+  "title": "ND Music",
+  "images": [
+   "projects/16-motion-systems/a1.jpg",
+   "projects/16-motion-systems/a2.jpg",
+   "projects/16-motion-systems/a3.jpg",
+   "projects/16-motion-systems/g1.jpg",
+   "projects/16-motion-systems/g3.jpg",
+   "projects/16-motion-systems/horiz.jpg",
+   "projects/16-motion-systems/vert.jpg"
+  ]
+ },
+ "sledgehammer": {
+  "title": "Sledgehammer",
+  "images": [
+   "projects/17-motion-rndr-sledgehammer/facecover.jpg",
+   "projects/17-motion-rndr-sledgehammer/gif.jpg",
+   "projects/17-motion-rndr-sledgehammer/p_decoding.jpg",
+   "projects/17-motion-rndr-sledgehammer/p_faces.jpg",
+   "projects/17-motion-rndr-sledgehammer/p_room.jpg",
+   "projects/17-motion-rndr-sledgehammer/p_silhouette.jpg",
+   "projects/17-motion-rndr-sledgehammer/p_watch.jpg",
+   "projects/17-motion-rndr-sledgehammer/v_cubes.jpg",
+   "projects/17-motion-rndr-sledgehammer/v_particles.jpg",
+   "projects/17-motion-rndr-sledgehammer/v_source.jpg"
+  ]
+ }
+}
