@@ -187,7 +187,7 @@ const topics = TOPICS.map((t) => {
     photo.style.setProperty("--ddy", (fy - py).toFixed(1));
     photo.dataset.cx = fx.toFixed(1);            // settled canvas centre — used to pan the map to it
     photo.dataset.cy = fy.toFixed(1);
-    photo.innerHTML = `<img src="${PROJECTS[pid].img}" alt="${PROJECTS[pid].title}" loading="lazy" />`;
+    photo.innerHTML = `<img src="${PROJECTS[pid].img}" alt="${PROJECTS[pid].title}" loading="lazy"${PROJECTS[pid].coverPos ? ` style="object-position:${PROJECTS[pid].coverPos}"` : ""} />`;
     photo.addEventListener("click", (e) => { e.stopPropagation(); enterProject(photo, pid); });
 
     canvas.append(snode);
@@ -412,7 +412,7 @@ const gridInner = document.querySelector("[data-grid-inner]");
 Object.entries(PROJECTS).reverse().forEach(([pid, p]) => {
   const cell = document.createElement("button");
   cell.type = "button"; cell.className = "cell"; cell.dataset.pid = pid;
-  cell.innerHTML = `<img src="${p.img}" alt="${p.title}" loading="lazy" /><span class="cell__name">${p.title}</span>`;
+  cell.innerHTML = `<img src="${p.img}" alt="${p.title}" loading="lazy"${p.coverPos ? ` style="object-position:${p.coverPos}"` : ""} /><span class="cell__name">${p.title}</span>`;
   cell.addEventListener("click", () => openProject(pid));
   gridInner.appendChild(cell);
 });

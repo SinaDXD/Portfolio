@@ -812,7 +812,7 @@ const PROJECTS = {
     "title": "Reality Check",
     "subtitle": "Reframing Swisscovery for exploratory design research",
     "field": "UX Research · Thematic Analysis · Prototyping",
-    "img": "projects/11-reality-check/pf/beforeafter.jpg",
+    "img": "projects/11-reality-check/pf/hero.jpg",
     "images": [
       "projects/11-reality-check/pf/beforeafter.jpg",
       "projects/11-reality-check/pf/glance.jpg",
@@ -892,7 +892,8 @@ const PROJECTS = {
         "type": "image",
         "file": "projects/11-reality-check/pf/kmap_p.jpg"
       }
-    ]
+    ],
+    "coverPos": "top"
   },
   "cue": {
     "title": "Cue (Movie Picker)",
