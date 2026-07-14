@@ -1540,7 +1540,7 @@ const PROJECTS = {
 const TOPICS = [
   {
     "id": "industrial",
-    "label": "Industrial design",
+    "label": "Digital Experience Design",
     "angle": -90,
     "len": 360,
     "projects": [
