@@ -280,11 +280,17 @@ function fillProject(pid) {
   pv.querySelector("[data-project-field]").textContent = p.field;
   pv.querySelector("[data-project-title]").textContent = p.title;
   const metaLine = [p.year, p.collaboration].filter(Boolean).join(" · ");
+  // Drop any section that just repeats the one-line summary (the "OVERVIEW"
+  // sections duplicate it), so the lead isn't shown twice.
+  const norm = (t) => (t || "").replace(/\s+/g, " ").trim().toLowerCase();
+  const sections = (p.sections || []).filter((s) => norm(s.body) !== norm(p.summary));
   pv.querySelector("[data-project-desc]").innerHTML =
     (metaLine ? `<p class="project__metaline">${esc(metaLine)}</p>` : "") +
     (p.summary ? `<p class="project__lead">${esc(p.summary)}</p>` : "") +
-    (p.sections || []).map((s) =>
-      (s.label ? `<h3>${esc(s.label)}</h3>` : "") + `<p>${esc(s.body)}</p>`).join("");
+    sections.map((s) => {
+      const head = s.label || s.heading;
+      return (head ? `<h3>${esc(head)}</h3>` : "") + `<p>${esc(s.body)}</p>`;
+    }).join("");
   pv.querySelector("[data-project-media]").innerHTML = mediaHTML(p);
   pv.scrollTop = 0; pv.querySelector(".project__grid").scrollTop = 0;
   pv.querySelector("[data-project-media]").scrollTop = 0;
