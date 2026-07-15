@@ -1263,7 +1263,7 @@ const PROJECTS = {
     ]
   },
   "januery": {
-    "title": "Januer Card",
+    "title": "January Card",
     "subtitle": "An interactive New Year card about repair",
     "field": "Brand Identity · Digital Design · Printing",
     "img": "projects/15-januer-card/main_image.jpg",
