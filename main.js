@@ -336,6 +336,14 @@ function enterProject(photoEl, pid) {
 
   requestAnimationFrame(() => {
     const hero = pv.querySelector("[data-project-media] img");
+    // Some projects lead with a video (no cover image to morph into). Skip the
+    // shared-element morph and just open the page, otherwise it would hang in
+    // the hidden "is-entering" state and the text never appears.
+    if (!hero) {
+      pv.classList.remove("is-entering");
+      pv.classList.add("is-open");                 // bg fills + content fades up (same as morph finish)
+      return;
+    }
     const target = hero.getBoundingClientRect();   // where the hero will sit on the page
 
     // a clone of the cover that morphs from the clicked rectangle to the hero box

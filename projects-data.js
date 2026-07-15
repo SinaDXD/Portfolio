@@ -1284,7 +1284,7 @@ const PROJECTS = {
       {
         "label": "",
         "heading": "Overview",
-        "body": "Due to confidentiality agreements, only publicly released work can be showcased. One example is a holiday card designed for Tribecraft’s annual New Year tradition, known in Swiss culture as the Hole of January. Each card features a handwritten personal message and uses interaction to communicate cultural nuance and sustainability values."
+        "body": "Due to confidentiality agreements, only publicly released work can be showcased. One example is a holiday card designed for Tribecraft’s annual New Year tradition, known in Swiss German as the Januarloch (the “Hole of January”). Each card features a handwritten personal message and uses interaction to communicate cultural nuance and sustainability values."
       },
       {
         "label": "",
